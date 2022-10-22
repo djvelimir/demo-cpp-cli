@@ -1,3 +1,5 @@
 #include "program-base.h"
 
-ProgramBase::~ProgramBase() {};
+namespace program {
+    ProgramBase::~ProgramBase() {};
+}

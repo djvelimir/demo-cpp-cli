@@ -1,3 +1,5 @@
 #include "terminal-base.h"
 
-TerminalBase::~TerminalBase() {};
+namespace terminal {
+    TerminalBase::~TerminalBase() {};
+}

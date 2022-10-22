@@ -1,14 +1,25 @@
 #include <iostream>
-#include "argument-validator/argument-validator-base.h"
-#include "argument-validator/argument-validator.h"
-#include "password-generator/password-generator-base.h"
-#include "password-generator/password-generator.h"
+#include "argument_validator/argument-validator-base.h"
+#include "argument_validator/argument-validator.h"
+#include "password_generator/password-generator-base.h"
+#include "password_generator/password-generator.h"
 #include "terminal/terminal-base.h"
 #include "terminal/terminal.h"
-#include "argument-processor/argument-processor-base.h"
-#include "argument-processor/argument-processor.h"
+#include "argument_processor/argument-processor-base.h"
+#include "argument_processor/argument-processor.h"
 #include "program/program-base.h"
 #include "program/program.h"
+
+using argument_validator::ArgumentValidatorBase;
+using argument_validator::ArgumentValidator;
+using password_generator::PasswordGeneratorBase;
+using password_generator::PasswordGenerator;
+using terminal::TerminalBase;
+using terminal::Terminal;
+using argument_processor::ArgumentProcessorBase;
+using argument_processor::ArgumentProcessor;
+using program::ProgramBase;
+using program::Program;
 
 int main(int argc, char* argv[]) {    
 

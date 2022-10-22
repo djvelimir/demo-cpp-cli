@@ -6,12 +6,12 @@ enable_testing()
 
 add_executable(demo-cpp-cli
   src/main.cpp
-  src/argument-processor/argument-processor-base.cpp
-  src/argument-processor/argument-processor.cpp
-  src/argument-validator/argument-validator-base.cpp
-  src/argument-validator/argument-validator.cpp
-  src/password-generator/password-generator-base.cpp
-  src/password-generator/password-generator.cpp
+  src/argument_processor/argument-processor-base.cpp
+  src/argument_processor/argument-processor.cpp
+  src/argument_validator/argument-validator-base.cpp
+  src/argument_validator/argument-validator.cpp
+  src/password_generator/password-generator-base.cpp
+  src/password_generator/password-generator.cpp
   src/program/program-base.cpp
   src/program/program.cpp
   src/terminal/terminal-base.cpp
