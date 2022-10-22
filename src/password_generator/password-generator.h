@@ -10,10 +10,15 @@ namespace password_generator
     {
     private:
         int PASSWORD_LENGTH;
+
         string UPPERCASE_CHARACTERS;
+
         string LOWERCASE_CHARACTERS;
+
         string DIGIT_CHARACTERS;
+
         string SPECIAL_CHARACTERS;
+
         string UNION_OF_ALLOWED_CHARACTERS;
 
         char GenerateRandomCharacter(string characters);

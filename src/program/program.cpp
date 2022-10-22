@@ -1,12 +1,14 @@
 #include "program.h"
 
+using std::move;
 using std::string;
+using std::unique_ptr;
 
 namespace program
 {
-    Program::Program(ArgumentProcessorBase *argumentProcessor)
+    Program::Program(unique_ptr<ArgumentProcessorBase> &argumentProcessor)
     {
-        this->argumentProcessor = argumentProcessor;
+        this->argumentProcessor = move(argumentProcessor);
     }
 
     Program::~Program() {}

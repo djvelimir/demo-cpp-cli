@@ -1,5 +1,7 @@
 #include "terminal.h"
 
+using std::cout;
+using std::endl;
 using std::string;
 
 namespace terminal
@@ -8,6 +10,6 @@ namespace terminal
 
     void Terminal::Show(string message)
     {
-        std::cout << message << std::endl;
+        cout << message << endl;
     }
 }

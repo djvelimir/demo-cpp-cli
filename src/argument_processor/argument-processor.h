@@ -8,6 +8,7 @@
 using argument_validator::ArgumentValidatorBase;
 using password_generator::PasswordGeneratorBase;
 using std::string;
+using std::unique_ptr;
 using terminal::TerminalBase;
 
 namespace argument_processor
@@ -15,14 +16,14 @@ namespace argument_processor
     class ArgumentProcessor : public ArgumentProcessorBase
     {
     private:
-        ArgumentValidatorBase *argumentValidator;
+        unique_ptr<ArgumentValidatorBase> argumentValidator;
 
-        PasswordGeneratorBase *passwordGenerator;
+        unique_ptr<PasswordGeneratorBase> passwordGenerator;
 
-        TerminalBase *terminal;
+        unique_ptr<TerminalBase> terminal;
 
     public:
-        ArgumentProcessor(ArgumentValidatorBase *argumentValidator, PasswordGeneratorBase *passwordGenerator, TerminalBase *terminal);
+        ArgumentProcessor(unique_ptr<ArgumentValidatorBase> &argumentValidator, unique_ptr<PasswordGeneratorBase> &passwordGenerator, unique_ptr<TerminalBase> &terminal);
 
         virtual ~ArgumentProcessor();
 

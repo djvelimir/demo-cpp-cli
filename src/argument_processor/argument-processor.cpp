@@ -1,14 +1,16 @@
 #include "argument-processor.h"
 
+using std::move;
 using std::string;
+using std::unique_ptr;
 
 namespace argument_processor
 {
-    ArgumentProcessor::ArgumentProcessor(ArgumentValidatorBase *argumentValidator, PasswordGeneratorBase *passwordGenerator, TerminalBase *terminal)
+    ArgumentProcessor::ArgumentProcessor(unique_ptr<ArgumentValidatorBase> &argumentValidator, unique_ptr<PasswordGeneratorBase> &passwordGenerator, unique_ptr<TerminalBase> &terminal)
     {
-        this->argumentValidator = argumentValidator;
-        this->passwordGenerator = passwordGenerator;
-        this->terminal = terminal;
+        this->argumentValidator = move(argumentValidator);
+        this->passwordGenerator = move(passwordGenerator);
+        this->terminal = move(terminal);
     }
 
     ArgumentProcessor::~ArgumentProcessor(){};

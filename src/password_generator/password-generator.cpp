@@ -1,6 +1,11 @@
 #include "password-generator.h"
+#include <random>
 
+using std::mt19937;
+using std::random_device;
+using std::shuffle;
 using std::string;
+using std::uniform_int_distribution;
 
 namespace password_generator
 {
@@ -21,8 +26,6 @@ namespace password_generator
 
     string PasswordGenerator::Generate()
     {
-        srand(time(0));
-
         string password;
 
         // generate at least one uppercase character
@@ -44,14 +47,20 @@ namespace password_generator
         }
 
         // shuffle generated characters
-        random_shuffle(password.begin(), password.end());
+        random_device rd;
+        mt19937 gen(rd());
+        shuffle(password.begin(), password.end(), gen);
 
         return password;
     }
 
     char PasswordGenerator::GenerateRandomCharacter(string characters)
     {
-        int randomIndex = rand() % characters.length();
+        random_device rd;
+        mt19937 gen(rd());
+        uniform_int_distribution<> dis(0, characters.length() - 1);
+        int randomIndex = dis(gen);
+
         return characters[randomIndex];
     }
 }

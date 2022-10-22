@@ -18,7 +18,9 @@ using password_generator::PasswordGenerator;
 using password_generator::PasswordGeneratorBase;
 using program::Program;
 using program::ProgramBase;
+using std::make_unique;
 using std::string;
+using std::unique_ptr;
 using terminal::Terminal;
 using terminal::TerminalBase;
 
@@ -31,18 +33,11 @@ int main(int argc, char *argv[])
         args[i] = argv[i + 1];
     }
 
-    ArgumentValidatorBase *argumentValidator = new ArgumentValidator();
-    PasswordGeneratorBase *passwordGenerator = new PasswordGenerator();
-    TerminalBase *terminal = new Terminal();
-    ArgumentProcessorBase *argumentProcessor = new ArgumentProcessor(argumentValidator, passwordGenerator, terminal);
+    unique_ptr<ArgumentValidatorBase> argumentValidator = make_unique<ArgumentValidator>();
+    unique_ptr<PasswordGeneratorBase> passwordGenerator = make_unique<PasswordGenerator>();
+    unique_ptr<TerminalBase> terminal = make_unique<Terminal>();
+    unique_ptr<ArgumentProcessorBase> argumentProcessor = make_unique<ArgumentProcessor>(argumentValidator, passwordGenerator, terminal);
 
-    ProgramBase *program = new Program(argumentProcessor);
+    unique_ptr<ProgramBase> program = make_unique<Program>(argumentProcessor);
     program->Start(args, length);
-
-    delete argumentValidator;
-    delete passwordGenerator;
-    delete terminal;
-    delete argumentProcessor;
-
-    delete program;
 }

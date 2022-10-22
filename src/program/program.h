@@ -5,16 +5,17 @@
 
 using argument_processor::ArgumentProcessorBase;
 using std::string;
+using std::unique_ptr;
 
 namespace program
 {
     class Program : public ProgramBase
     {
     private:
-        ArgumentProcessorBase *argumentProcessor;
+        unique_ptr<ArgumentProcessorBase> argumentProcessor;
 
     public:
-        Program(ArgumentProcessorBase *argumentProcessor);
+        Program(unique_ptr<ArgumentProcessorBase> &argumentProcessor);
 
         virtual ~Program();
 
