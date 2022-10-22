@@ -1,9 +1,9 @@
 #pragma once
 
 #include "argument-processor-base.h"
-#include "argument-validator-base.h"
-#include "password-generator-base.h"
-#include "terminal-base.h"
+#include "../argument-validator/argument-validator-base.h"
+#include "../password-generator/password-generator-base.h"
+#include "../terminal/terminal-base.h"
 
 class ArgumentProcessor : public ArgumentProcessorBase
 {
