@@ -1,20 +1,21 @@
 #include "password-generator.h"
 
-namespace password_generator {
-    PasswordGenerator::PasswordGenerator() {
+namespace password_generator
+{
+    PasswordGenerator::PasswordGenerator()
+    {
         PASSWORD_LENGTH = 16;
         UPPERCASE_CHARACTERS = "ABCDEFGHIJKLMNOPQRSTUVWXYZ";
         LOWERCASE_CHARACTERS = "abcdefghijklmnopqrstuvwxyz";
         DIGIT_CHARACTERS = "0123456789";
         SPECIAL_CHARACTERS = "~`!@#$%^&*()-_=+[{]}\\|;:\'\",<.>/?";
         UNION_OF_ALLOWED_CHARACTERS = UPPERCASE_CHARACTERS +
-                    LOWERCASE_CHARACTERS +
-                    DIGIT_CHARACTERS +
-                    SPECIAL_CHARACTERS;
-
+                                      LOWERCASE_CHARACTERS +
+                                      DIGIT_CHARACTERS +
+                                      SPECIAL_CHARACTERS;
     }
 
-    PasswordGenerator::~PasswordGenerator() {};
+    PasswordGenerator::~PasswordGenerator(){};
 
     std::string PasswordGenerator::Generate()
     {

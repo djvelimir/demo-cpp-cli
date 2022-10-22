@@ -1,7 +1,8 @@
 #include "terminal.h"
 
-namespace terminal {
-    Terminal::~Terminal() {};
+namespace terminal
+{
+    Terminal::~Terminal(){};
 
     void Terminal::Show(std::string message)
     {

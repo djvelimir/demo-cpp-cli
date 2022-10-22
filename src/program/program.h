@@ -5,17 +5,18 @@
 
 using argument_processor::ArgumentProcessorBase;
 
-namespace program {
+namespace program
+{
     class Program : public ProgramBase
     {
-        private:
-            ArgumentProcessorBase* argumentProcessor;
+    private:
+        ArgumentProcessorBase *argumentProcessor;
 
-        public:
-            Program(ArgumentProcessorBase* argumentProcessor);
+    public:
+        Program(ArgumentProcessorBase *argumentProcessor);
 
-            virtual ~Program();
+        virtual ~Program();
 
-            void Start(std::string args[], int length);
+        void Start(std::string args[], int length);
     };
 }

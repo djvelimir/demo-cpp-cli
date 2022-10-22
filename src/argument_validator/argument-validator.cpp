@@ -1,7 +1,8 @@
 #include "argument-validator.h"
 
-namespace argument_validator {
-    ArgumentValidator::~ArgumentValidator() {};
+namespace argument_validator
+{
+    ArgumentValidator::~ArgumentValidator(){};
 
     bool ArgumentValidator::Validate(std::string args[], int length)
     {

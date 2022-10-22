@@ -9,21 +9,22 @@ using argument_validator::ArgumentValidatorBase;
 using password_generator::PasswordGeneratorBase;
 using terminal::TerminalBase;
 
-namespace argument_processor {
+namespace argument_processor
+{
     class ArgumentProcessor : public ArgumentProcessorBase
     {
-        private:
-            ArgumentValidatorBase* argumentValidator;
+    private:
+        ArgumentValidatorBase *argumentValidator;
 
-            PasswordGeneratorBase* passwordGenerator;
+        PasswordGeneratorBase *passwordGenerator;
 
-            TerminalBase* terminal;
+        TerminalBase *terminal;
 
-        public:
-            ArgumentProcessor(ArgumentValidatorBase* argumentValidator, PasswordGeneratorBase* passwordGenerator, TerminalBase* terminal);
+    public:
+        ArgumentProcessor(ArgumentValidatorBase *argumentValidator, PasswordGeneratorBase *passwordGenerator, TerminalBase *terminal);
 
-            virtual ~ArgumentProcessor();
+        virtual ~ArgumentProcessor();
 
-            void Process(std::string args[], int length);
+        void Process(std::string args[], int length);
     };
 }

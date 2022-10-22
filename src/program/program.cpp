@@ -1,7 +1,9 @@
 #include "program.h"
 
-namespace program {
-    Program::Program(ArgumentProcessorBase* argumentProcessor) {
+namespace program
+{
+    Program::Program(ArgumentProcessorBase *argumentProcessor)
+    {
         this->argumentProcessor = argumentProcessor;
     }
 

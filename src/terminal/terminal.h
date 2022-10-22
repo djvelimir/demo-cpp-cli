@@ -2,12 +2,13 @@
 
 #include "terminal-base.h"
 
-namespace terminal {
+namespace terminal
+{
     class Terminal : public TerminalBase
     {
-        public:
-            virtual ~Terminal();
+    public:
+        virtual ~Terminal();
 
-            void Show(std::string message);
+        void Show(std::string message);
     };
 }

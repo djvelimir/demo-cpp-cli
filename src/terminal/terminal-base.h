@@ -2,12 +2,13 @@
 
 #include <iostream>
 
-namespace terminal {
+namespace terminal
+{
     class TerminalBase
     {
-        public:
-            virtual ~TerminalBase();
+    public:
+        virtual ~TerminalBase();
 
-            virtual void Show(std::string message) = 0;
+        virtual void Show(std::string message) = 0;
     };
 }

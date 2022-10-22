@@ -10,31 +10,32 @@
 #include "program/program-base.h"
 #include "program/program.h"
 
-using argument_validator::ArgumentValidatorBase;
-using argument_validator::ArgumentValidator;
-using password_generator::PasswordGeneratorBase;
-using password_generator::PasswordGenerator;
-using terminal::TerminalBase;
-using terminal::Terminal;
-using argument_processor::ArgumentProcessorBase;
 using argument_processor::ArgumentProcessor;
-using program::ProgramBase;
+using argument_processor::ArgumentProcessorBase;
+using argument_validator::ArgumentValidator;
+using argument_validator::ArgumentValidatorBase;
+using password_generator::PasswordGenerator;
+using password_generator::PasswordGeneratorBase;
 using program::Program;
+using program::ProgramBase;
+using terminal::Terminal;
+using terminal::TerminalBase;
 
-int main(int argc, char* argv[]) {    
-
-    int length = argc-1;
+int main(int argc, char *argv[])
+{
+    int length = argc - 1;
     std::string args[length];
-    for(int i=0; i<length; i++) {
-        args[i] = argv[i+1];
+    for (int i = 0; i < length; i++)
+    {
+        args[i] = argv[i + 1];
     }
 
-    ArgumentValidatorBase* argumentValidator = new ArgumentValidator();
-    PasswordGeneratorBase* passwordGenerator = new PasswordGenerator();
-    TerminalBase* terminal = new Terminal();
-    ArgumentProcessorBase* argumentProcessor = new ArgumentProcessor(argumentValidator, passwordGenerator, new Terminal());
+    ArgumentValidatorBase *argumentValidator = new ArgumentValidator();
+    PasswordGeneratorBase *passwordGenerator = new PasswordGenerator();
+    TerminalBase *terminal = new Terminal();
+    ArgumentProcessorBase *argumentProcessor = new ArgumentProcessor(argumentValidator, passwordGenerator, new Terminal());
 
-    ProgramBase* program = new Program(argumentProcessor);
+    ProgramBase *program = new Program(argumentProcessor);
     program->Start(args, length);
 
     delete argumentValidator;

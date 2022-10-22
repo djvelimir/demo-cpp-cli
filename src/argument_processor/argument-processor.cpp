@@ -1,14 +1,15 @@
 #include "argument-processor.h"
 
-namespace argument_processor {
-    ArgumentProcessor::ArgumentProcessor(ArgumentValidatorBase* argumentValidator, PasswordGeneratorBase* passwordGenerator, TerminalBase* terminal)
+namespace argument_processor
+{
+    ArgumentProcessor::ArgumentProcessor(ArgumentValidatorBase *argumentValidator, PasswordGeneratorBase *passwordGenerator, TerminalBase *terminal)
     {
         this->argumentValidator = argumentValidator;
         this->passwordGenerator = passwordGenerator;
         this->terminal = terminal;
     }
 
-    ArgumentProcessor::~ArgumentProcessor() {};
+    ArgumentProcessor::~ArgumentProcessor(){};
 
     void ArgumentProcessor::Process(std::string args[], int length)
     {

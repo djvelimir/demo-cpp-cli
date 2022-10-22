@@ -2,12 +2,13 @@
 
 #include <iostream>
 
-namespace program {
+namespace program
+{
     class ProgramBase
     {
-        public:
-            virtual ~ProgramBase();
+    public:
+        virtual ~ProgramBase();
 
-            virtual void Start(std::string args[], int length) = 0;
+        virtual void Start(std::string args[], int length) = 0;
     };
 }
