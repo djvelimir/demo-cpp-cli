@@ -1,5 +1,4 @@
-#ifndef TerminalBase_H
-#define TerminalBase_H
+#pragma once
 
 #include <iostream>
 
@@ -10,5 +9,3 @@ class TerminalBase
         
         virtual void Show(std::string message) = 0;
 };
-
-#endif

@@ -1,5 +1,4 @@
-#ifndef ArgumentProcessorBase_H
-#define ArgumentProcessorBase_H
+#pragma once
 
 #include <iostream>
 
@@ -10,5 +9,3 @@ class ArgumentProcessorBase
         
         virtual void Process(std::string args[], int length) = 0;
 };
-
-#endif

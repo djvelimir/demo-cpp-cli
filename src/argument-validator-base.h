@@ -1,5 +1,4 @@
-#ifndef ArgumentValidatorBase_H
-#define ArgumentValidatorBase_H
+#pragma once
 
 #include <iostream>
 
@@ -10,5 +9,3 @@ class ArgumentValidatorBase
         
         virtual bool Validate(std::string args[], int length) = 0;
 };
-
-#endif

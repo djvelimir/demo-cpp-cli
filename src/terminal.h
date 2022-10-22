@@ -1,5 +1,4 @@
-#ifndef Terminal_H
-#define Terminal_H
+#pragma once
 
 #include "terminal-base.h"
 
@@ -10,5 +9,3 @@ class Terminal : public TerminalBase
         
         void Show(std::string message);
 };
-
-#endif

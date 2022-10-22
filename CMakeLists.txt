@@ -5,17 +5,17 @@ include(CTest)
 enable_testing()
 
 add_executable(demo-cpp-cli
-  main.cpp
-  include/argument-processor-base.cpp
-  include/argument-processor.cpp
-  include/argument-validator-base.cpp
-  include/argument-validator.cpp
-  include/password-generator-base.cpp
-  include/password-generator.cpp
-  include/program-base.cpp
-  include/program.cpp
-  include/terminal-base.cpp
-  include/terminal.cpp
+  src/main.cpp
+  src/argument-processor-base.cpp
+  src/argument-processor.cpp
+  src/argument-validator-base.cpp
+  src/argument-validator.cpp
+  src/password-generator-base.cpp
+  src/password-generator.cpp
+  src/program-base.cpp
+  src/program.cpp
+  src/terminal-base.cpp
+  src/terminal.cpp
 )
 
 set(CPACK_PROJECT_NAME ${PROJECT_NAME})

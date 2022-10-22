@@ -1,5 +1,4 @@
-#ifndef ProgramBase_H
-#define ProgramBase_H
+#pragma once
 
 #include <iostream>
 
@@ -10,5 +9,3 @@ class ProgramBase
         
         virtual void Start(std::string args[], int length) = 0;
 };
-
-#endif

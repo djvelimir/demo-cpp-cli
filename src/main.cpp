@@ -1,14 +1,14 @@
 #include <iostream>
-#include "include/argument-validator-base.h"
-#include "include/argument-validator.h"
-#include "include/password-generator-base.h"
-#include "include/password-generator.h"
-#include "include/terminal-base.h"
-#include "include/terminal.h"
-#include "include/argument-processor-base.h"
-#include "include/argument-processor.h"
-#include "include/program-base.h"
-#include "include/program.h"
+#include "argument-validator-base.h"
+#include "argument-validator.h"
+#include "password-generator-base.h"
+#include "password-generator.h"
+#include "terminal-base.h"
+#include "terminal.h"
+#include "argument-processor-base.h"
+#include "argument-processor.h"
+#include "program-base.h"
+#include "program.h"
 
 int main(int argc, char* argv[]) {    
 

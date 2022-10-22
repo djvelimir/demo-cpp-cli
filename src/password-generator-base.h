@@ -1,5 +1,4 @@
-#ifndef PasswordGeneratorBase_H
-#define PasswordGeneratorBase_H
+#pragma once
 
 #include <iostream>
 
@@ -10,5 +9,3 @@ class PasswordGeneratorBase
         
         virtual std::string Generate() = 0;
 };
-
-#endif

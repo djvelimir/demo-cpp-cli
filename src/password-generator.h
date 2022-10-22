@@ -1,5 +1,4 @@
-#ifndef PasswordGenerator_H
-#define PasswordGenerator_H
+#pragma once
 
 #include "password-generator-base.h"
 
@@ -20,5 +19,3 @@ class PasswordGenerator : public PasswordGeneratorBase
         
         std::string Generate();
 };
-
-#endif

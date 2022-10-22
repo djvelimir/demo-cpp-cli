@@ -1,5 +1,4 @@
-#ifndef ArgumentValidator_H
-#define ArgumentValidator_H
+#pragma once
 
 #include "argument-validator-base.h"
 
@@ -10,5 +9,3 @@ class ArgumentValidator : public ArgumentValidatorBase
         
         bool Validate(std::string args[], int length);
 };
-
-#endif

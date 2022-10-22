@@ -1,5 +1,4 @@
-#ifndef Program_H
-#define Program_H
+#pragma once
 
 #include "program-base.h"
 #include "argument-processor.h"
@@ -16,5 +15,3 @@ class Program : public ProgramBase
 
         void Start(std::string args[], int length);
 };
-
-#endif

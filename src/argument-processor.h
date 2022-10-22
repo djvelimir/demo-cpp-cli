@@ -1,5 +1,4 @@
-#ifndef ArgumentProcessor_H
-#define ArgumentProcessor_H
+#pragma once
 
 #include "argument-processor-base.h"
 #include "argument-validator-base.h"
@@ -22,5 +21,3 @@ class ArgumentProcessor : public ArgumentProcessorBase
 
         void Process(std::string args[], int length);
 };
-
-#endif
