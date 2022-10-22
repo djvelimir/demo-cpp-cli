@@ -34,7 +34,7 @@ int main(int argc, char *argv[])
     ArgumentValidatorBase *argumentValidator = new ArgumentValidator();
     PasswordGeneratorBase *passwordGenerator = new PasswordGenerator();
     TerminalBase *terminal = new Terminal();
-    ArgumentProcessorBase *argumentProcessor = new ArgumentProcessor(argumentValidator, passwordGenerator, new Terminal());
+    ArgumentProcessorBase *argumentProcessor = new ArgumentProcessor(argumentValidator, passwordGenerator, terminal);
 
     ProgramBase *program = new Program(argumentProcessor);
     program->Start(args, length);
