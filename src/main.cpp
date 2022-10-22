@@ -18,13 +18,14 @@ using password_generator::PasswordGenerator;
 using password_generator::PasswordGeneratorBase;
 using program::Program;
 using program::ProgramBase;
+using std::string;
 using terminal::Terminal;
 using terminal::TerminalBase;
 
 int main(int argc, char *argv[])
 {
     int length = argc - 1;
-    std::string args[length];
+    string args[length];
     for (int i = 0; i < length; i++)
     {
         args[i] = argv[i + 1];

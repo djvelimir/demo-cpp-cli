@@ -2,25 +2,27 @@
 
 #include "password-generator-base.h"
 
+using std::string;
+
 namespace password_generator
 {
     class PasswordGenerator : public PasswordGeneratorBase
     {
     private:
         int PASSWORD_LENGTH;
-        std::string UPPERCASE_CHARACTERS;
-        std::string LOWERCASE_CHARACTERS;
-        std::string DIGIT_CHARACTERS;
-        std::string SPECIAL_CHARACTERS;
-        std::string UNION_OF_ALLOWED_CHARACTERS;
+        string UPPERCASE_CHARACTERS;
+        string LOWERCASE_CHARACTERS;
+        string DIGIT_CHARACTERS;
+        string SPECIAL_CHARACTERS;
+        string UNION_OF_ALLOWED_CHARACTERS;
 
-        char GenerateRandomCharacter(std::string characters);
+        char GenerateRandomCharacter(string characters);
 
     public:
         PasswordGenerator();
 
         virtual ~PasswordGenerator();
 
-        std::string Generate();
+        string Generate();
     };
 }

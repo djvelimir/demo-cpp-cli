@@ -1,5 +1,7 @@
 #include "program.h"
 
+using std::string;
+
 namespace program
 {
     Program::Program(ArgumentProcessorBase *argumentProcessor)
@@ -9,7 +11,7 @@ namespace program
 
     Program::~Program() {}
 
-    void Program::Start(std::string args[], int length)
+    void Program::Start(string args[], int length)
     {
         argumentProcessor->Process(args, length);
     }

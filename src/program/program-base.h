@@ -2,6 +2,8 @@
 
 #include <iostream>
 
+using std::string;
+
 namespace program
 {
     class ProgramBase
@@ -9,6 +11,6 @@ namespace program
     public:
         virtual ~ProgramBase();
 
-        virtual void Start(std::string args[], int length) = 0;
+        virtual void Start(string args[], int length) = 0;
     };
 }

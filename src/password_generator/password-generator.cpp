@@ -1,5 +1,7 @@
 #include "password-generator.h"
 
+using std::string;
+
 namespace password_generator
 {
     PasswordGenerator::PasswordGenerator()
@@ -17,11 +19,11 @@ namespace password_generator
 
     PasswordGenerator::~PasswordGenerator(){};
 
-    std::string PasswordGenerator::Generate()
+    string PasswordGenerator::Generate()
     {
         srand(time(0));
 
-        std::string password;
+        string password;
 
         // generate at least one uppercase character
         password.append(1, GenerateRandomCharacter(UPPERCASE_CHARACTERS));
@@ -47,7 +49,7 @@ namespace password_generator
         return password;
     }
 
-    char PasswordGenerator::GenerateRandomCharacter(std::string characters)
+    char PasswordGenerator::GenerateRandomCharacter(string characters)
     {
         int randomIndex = rand() % characters.length();
         return characters[randomIndex];

@@ -1,5 +1,7 @@
 #include "argument-processor.h"
 
+using std::string;
+
 namespace argument_processor
 {
     ArgumentProcessor::ArgumentProcessor(ArgumentValidatorBase *argumentValidator, PasswordGeneratorBase *passwordGenerator, TerminalBase *terminal)
@@ -11,16 +13,16 @@ namespace argument_processor
 
     ArgumentProcessor::~ArgumentProcessor(){};
 
-    void ArgumentProcessor::Process(std::string args[], int length)
+    void ArgumentProcessor::Process(string args[], int length)
     {
         if (!argumentValidator->Validate(args, length))
         {
-            std::string usage = "Usage:\n./demo-cpp-cli generate password";
+            string usage = "Usage:\n./demo-cpp-cli generate password";
             terminal->Show(usage);
             return;
         }
 
-        std::string password = passwordGenerator->Generate();
+        string password = passwordGenerator->Generate();
         terminal->Show(password);
     }
 }

@@ -2,6 +2,8 @@
 
 #include <iostream>
 
+using std::string;
+
 namespace password_generator
 {
     class PasswordGeneratorBase
@@ -9,6 +11,6 @@ namespace password_generator
     public:
         virtual ~PasswordGeneratorBase();
 
-        virtual std::string Generate() = 0;
+        virtual string Generate() = 0;
     };
 }

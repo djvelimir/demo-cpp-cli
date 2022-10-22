@@ -4,6 +4,7 @@
 #include "../argument_processor/argument-processor-base.h"
 
 using argument_processor::ArgumentProcessorBase;
+using std::string;
 
 namespace program
 {
@@ -17,6 +18,6 @@ namespace program
 
         virtual ~Program();
 
-        void Start(std::string args[], int length);
+        void Start(string args[], int length);
     };
 }
