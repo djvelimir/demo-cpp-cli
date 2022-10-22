@@ -6,8 +6,10 @@ namespace argument_validator
 {
     ArgumentValidator::~ArgumentValidator(){};
 
-    bool ArgumentValidator::Validate(string args[], int length)
+    bool ArgumentValidator::Validate(char *args[], int length)
     {
-        return length != 0 && length == 2 && args[0] == "generate" && args[1] == "password";
+        string command = args[1];
+        string argument = args[2];
+        return length != 0 && length == 3 && command == "generate" && argument == "password";
     }
 }

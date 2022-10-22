@@ -19,20 +19,12 @@ using password_generator::PasswordGeneratorBase;
 using program::Program;
 using program::ProgramBase;
 using std::make_unique;
-using std::string;
 using std::unique_ptr;
 using terminal::Terminal;
 using terminal::TerminalBase;
 
-int main(int argc, char *argv[])
+int main(int length, char *args[])
 {
-    int length = argc - 1;
-    string args[length];
-    for (int i = 0; i < length; i++)
-    {
-        args[i] = argv[i + 1];
-    }
-
     unique_ptr<ArgumentValidatorBase> argumentValidator = make_unique<ArgumentValidator>();
     unique_ptr<PasswordGeneratorBase> passwordGenerator = make_unique<PasswordGenerator>();
     unique_ptr<TerminalBase> terminal = make_unique<Terminal>();

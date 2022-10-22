@@ -7,7 +7,6 @@
 
 using argument_validator::ArgumentValidatorBase;
 using password_generator::PasswordGeneratorBase;
-using std::string;
 using std::unique_ptr;
 using terminal::TerminalBase;
 
@@ -27,6 +26,6 @@ namespace argument_processor
 
         virtual ~ArgumentProcessor();
 
-        void Process(string args[], int length);
+        void Process(char *args[], int length);
     };
 }

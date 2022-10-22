@@ -2,8 +2,6 @@
 
 #include <iostream>
 
-using std::string;
-
 namespace argument_validator
 {
     class ArgumentValidatorBase
@@ -11,6 +9,6 @@ namespace argument_validator
     public:
         virtual ~ArgumentValidatorBase();
 
-        virtual bool Validate(string args[], int length) = 0;
+        virtual bool Validate(char *args[], int length) = 0;
     };
 }

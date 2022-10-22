@@ -1,7 +1,6 @@
 #include "program.h"
 
 using std::move;
-using std::string;
 using std::unique_ptr;
 
 namespace program
@@ -13,7 +12,7 @@ namespace program
 
     Program::~Program() {}
 
-    void Program::Start(string args[], int length)
+    void Program::Start(char *args[], int length)
     {
         argumentProcessor->Process(args, length);
     }

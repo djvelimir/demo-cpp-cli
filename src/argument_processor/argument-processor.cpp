@@ -15,7 +15,7 @@ namespace argument_processor
 
     ArgumentProcessor::~ArgumentProcessor(){};
 
-    void ArgumentProcessor::Process(string args[], int length)
+    void ArgumentProcessor::Process(char *args[], int length)
     {
         if (!argumentValidator->Validate(args, length))
         {
