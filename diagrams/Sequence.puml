@@ -1,9 +1,9 @@
 @startuml Sequence
 participant Program as program
-participant ArgumentProcessorBase as argumentProcessor
-participant ArgumentValidatorBase as argumentValidator
-participant PasswordGeneratorBase as passwordGenerator
-participant TerminalBase as terminal
+participant ArgumentProcessor as argumentProcessor
+participant ArgumentValidator as argumentValidator
+participant PasswordGenerator as passwordGenerator
+participant Terminal as terminal
 
 activate program
 

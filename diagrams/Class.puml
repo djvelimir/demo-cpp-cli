@@ -1,6 +1,6 @@
 @startuml class
 abstract class ProgramBase {
-    + Start(args: string[], length: int)
+    + {abstract} Start(args: string[], length: int)
 }
 
 class Program {
@@ -8,14 +8,14 @@ class Program {
 }
 
 abstract class ArgumentValidatorBase {
-    + Validate(args: string[], length: int): boolean
+    + {abstract} Validate(args: string[], length: int): boolean
 }
 
 class ArgumentValidator {
 }
 
 abstract class ArgumentProcessorBase {
-    + Process(args: string[], length: int)
+    + {abstract} Process(args: string[], length: int)
 }
 
 class ArgumentProcessor {
@@ -25,14 +25,14 @@ class ArgumentProcessor {
 }
 
 abstract class TerminalBase {
-    + Show(message: string)
+    + {abstract} Show(message: string)
 }
 
 class Terminal {
 }
 
 abstract class PasswordGeneratorBase {
-    + Generate(): string
+    + {abstract} Generate(): string
 }
 
 class PasswordGenerator {
