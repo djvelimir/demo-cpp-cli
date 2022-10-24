@@ -1,27 +1,27 @@
 #include <iostream>
-#include "argument_validator/argument-validator-base.h"
-#include "argument_validator/argument-validator.h"
-#include "password_generator/password-generator-base.h"
-#include "password_generator/password-generator.h"
-#include "terminal/terminal-base.h"
-#include "terminal/terminal.h"
-#include "argument_processor/argument-processor-base.h"
-#include "argument_processor/argument-processor.h"
+#include "validator/argument-validator-base.h"
+#include "validator/argument-validator.h"
+#include "generator/password-generator-base.h"
+#include "generator/password-generator.h"
+#include "display/terminal-base.h"
+#include "display/terminal.h"
+#include "processor/argument-processor-base.h"
+#include "processor/argument-processor.h"
 #include "program/program-base.h"
 #include "program/program.h"
 
-using argument_processor::ArgumentProcessor;
-using argument_processor::ArgumentProcessorBase;
-using argument_validator::ArgumentValidator;
-using argument_validator::ArgumentValidatorBase;
-using password_generator::PasswordGenerator;
-using password_generator::PasswordGeneratorBase;
+using display::Terminal;
+using display::TerminalBase;
+using generator::PasswordGenerator;
+using generator::PasswordGeneratorBase;
+using processor::ArgumentProcessor;
+using processor::ArgumentProcessorBase;
 using program::Program;
 using program::ProgramBase;
 using std::make_unique;
 using std::unique_ptr;
-using terminal::Terminal;
-using terminal::TerminalBase;
+using validator::ArgumentValidator;
+using validator::ArgumentValidatorBase;
 
 int main(int length, char *args[])
 {

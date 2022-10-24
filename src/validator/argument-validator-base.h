@@ -2,7 +2,7 @@
 
 #include <iostream>
 
-namespace argument_validator
+namespace validator
 {
     class ArgumentValidatorBase
     {

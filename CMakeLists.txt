@@ -7,16 +7,16 @@ enable_testing()
 
 add_executable(demo-cpp-cli
   src/main.cpp
-  src/argument_processor/argument-processor-base.cpp
-  src/argument_processor/argument-processor.cpp
-  src/argument_validator/argument-validator-base.cpp
-  src/argument_validator/argument-validator.cpp
-  src/password_generator/password-generator-base.cpp
-  src/password_generator/password-generator.cpp
+  src/processor/argument-processor-base.cpp
+  src/processor/argument-processor.cpp
+  src/validator/argument-validator-base.cpp
+  src/validator/argument-validator.cpp
+  src/generator/password-generator-base.cpp
+  src/generator/password-generator.cpp
   src/program/program-base.cpp
   src/program/program.cpp
-  src/terminal/terminal-base.cpp
-  src/terminal/terminal.cpp
+  src/display/terminal-base.cpp
+  src/display/terminal.cpp
 )
 
 set(CPACK_PROJECT_NAME ${PROJECT_NAME})

@@ -1,9 +1,9 @@
 #pragma once
 
 #include "program-base.h"
-#include "../argument_processor/argument-processor-base.h"
+#include "../processor/argument-processor-base.h"
 
-using argument_processor::ArgumentProcessorBase;
+using processor::ArgumentProcessorBase;
 using std::unique_ptr;
 
 namespace program

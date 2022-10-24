@@ -7,7 +7,7 @@ using std::shuffle;
 using std::string;
 using std::uniform_int_distribution;
 
-namespace password_generator
+namespace generator
 {
     PasswordGenerator::PasswordGenerator()
     {

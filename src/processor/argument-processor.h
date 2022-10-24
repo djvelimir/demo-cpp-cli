@@ -1,16 +1,16 @@
 #pragma once
 
 #include "argument-processor-base.h"
-#include "../argument_validator/argument-validator-base.h"
-#include "../password_generator/password-generator-base.h"
-#include "../terminal/terminal-base.h"
+#include "../validator/argument-validator-base.h"
+#include "../generator/password-generator-base.h"
+#include "../display/terminal-base.h"
 
-using argument_validator::ArgumentValidatorBase;
-using password_generator::PasswordGeneratorBase;
+using display::TerminalBase;
+using generator::PasswordGeneratorBase;
 using std::unique_ptr;
-using terminal::TerminalBase;
+using validator::ArgumentValidatorBase;
 
-namespace argument_processor
+namespace processor
 {
     class ArgumentProcessor : public ArgumentProcessorBase
     {

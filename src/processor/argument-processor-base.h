@@ -2,7 +2,7 @@
 
 #include <iostream>
 
-namespace argument_processor
+namespace processor
 {
     class ArgumentProcessorBase
     {

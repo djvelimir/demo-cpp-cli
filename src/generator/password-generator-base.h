@@ -4,7 +4,7 @@
 
 using std::string;
 
-namespace password_generator
+namespace generator
 {
     class PasswordGeneratorBase
     {

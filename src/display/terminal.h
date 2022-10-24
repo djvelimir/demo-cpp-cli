@@ -4,7 +4,7 @@
 
 using std::string;
 
-namespace terminal
+namespace display
 {
     class Terminal : public TerminalBase
     {

@@ -1,6 +1,6 @@
 #include "argument-processor-base.h"
 
-namespace argument_processor
+namespace processor
 {
     ArgumentProcessorBase::~ArgumentProcessorBase(){};
 }

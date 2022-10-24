@@ -1,6 +1,6 @@
 #include "password-generator-base.h"
 
-namespace password_generator
+namespace generator
 {
     PasswordGeneratorBase::~PasswordGeneratorBase(){};
 }

@@ -1,6 +1,6 @@
 #include "terminal-base.h"
 
-namespace terminal
+namespace display
 {
     TerminalBase::~TerminalBase(){};
 }

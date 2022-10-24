@@ -1,6 +1,6 @@
 #include "argument-validator-base.h"
 
-namespace argument_validator
+namespace validator
 {
     ArgumentValidatorBase::~ArgumentValidatorBase(){};
 }

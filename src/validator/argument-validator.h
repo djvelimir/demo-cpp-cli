@@ -2,7 +2,7 @@
 
 #include "argument-validator-base.h"
 
-namespace argument_validator
+namespace validator
 {
     class ArgumentValidator : public ArgumentValidatorBase
     {

@@ -2,7 +2,7 @@
 
 using std::string;
 
-namespace argument_validator
+namespace validator
 {
     ArgumentValidator::~ArgumentValidator(){};
 

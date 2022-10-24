@@ -4,7 +4,7 @@ using std::move;
 using std::string;
 using std::unique_ptr;
 
-namespace argument_processor
+namespace processor
 {
     ArgumentProcessor::ArgumentProcessor(unique_ptr<ArgumentValidatorBase> &argumentValidator, unique_ptr<PasswordGeneratorBase> &passwordGenerator, unique_ptr<TerminalBase> &terminal)
     {
