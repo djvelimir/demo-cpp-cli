@@ -21,7 +21,9 @@ namespace generator
 
         string UNION_OF_ALLOWED_CHARACTERS;
 
-        char GenerateRandomCharacter(string characters);
+        static char GetRandomCharacter(string characters);
+
+        static string Shuffle(string stringToShuffle);
 
     public:
         PasswordGenerator();

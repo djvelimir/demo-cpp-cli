@@ -29,32 +29,28 @@ namespace generator
         string password;
 
         // generate at least one uppercase character
-        password.append(1, GenerateRandomCharacter(UPPERCASE_CHARACTERS));
+        password.append(1, GetRandomCharacter(UPPERCASE_CHARACTERS));
 
         // generate at least one lowercase character
-        password.append(1, GenerateRandomCharacter(LOWERCASE_CHARACTERS));
+        password.append(1, GetRandomCharacter(LOWERCASE_CHARACTERS));
 
         // generate at least one digit character
-        password.append(1, GenerateRandomCharacter(DIGIT_CHARACTERS));
+        password.append(1, GetRandomCharacter(DIGIT_CHARACTERS));
 
         // generate at least one special character
-        password.append(1, GenerateRandomCharacter(SPECIAL_CHARACTERS));
+        password.append(1, GetRandomCharacter(SPECIAL_CHARACTERS));
 
         for (int i = 4; i < PASSWORD_LENGTH; i++)
         {
             // generate random character from union of allowed characters
-            password.append(1, GenerateRandomCharacter(UNION_OF_ALLOWED_CHARACTERS));
+            password.append(1, GetRandomCharacter(UNION_OF_ALLOWED_CHARACTERS));
         }
 
-        // shuffle generated characters
-        random_device rd;
-        mt19937 gen(rd());
-        shuffle(password.begin(), password.end(), gen);
-
-        return password;
+        // return shuffled generated characters
+        return Shuffle(password);
     }
 
-    char PasswordGenerator::GenerateRandomCharacter(string characters)
+    char PasswordGenerator::GetRandomCharacter(string characters)
     {
         random_device rd;
         mt19937 gen(rd());
@@ -62,5 +58,14 @@ namespace generator
         int randomIndex = dis(gen);
 
         return characters[randomIndex];
+    }
+
+    string PasswordGenerator::Shuffle(string stringToShuffle)
+    {
+        random_device rd;
+        mt19937 gen(rd());
+        shuffle(stringToShuffle.begin(), stringToShuffle.end(), gen);
+
+        return stringToShuffle;
     }
 }
