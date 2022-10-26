@@ -17,6 +17,10 @@ add_executable(demo-cpp-cli
   src/program/program.cpp
   src/display/terminal-base.cpp
   src/display/terminal.cpp
+  src/shuffler/string-shuffler-base.cpp
+  src/shuffler/string-shuffler.cpp
+  src/generator/random-character-generator-base.cpp
+  src/generator/random-character-generator.cpp
 )
 
 set(CPACK_PROJECT_NAME ${PROJECT_NAME})

@@ -36,12 +36,42 @@ abstract class PasswordGeneratorBase {
 }
 
 class PasswordGenerator {
+    - passwordLength: int
+    - randomCharacterGenerator: RandomCharacterGeneratorBase
+    - stringShuffler: StringShufflerBase
+}
+
+interface RandomCharacterGeneratorBase {
+    + GenerateUppercaseCharacter(): char
+    + GenerateLowercaseCharacter(): char
+    + GenerateDigitCharacter(): char
+    + GenerateSpecialCharacter(): char
+    + GenerateAllowedCharacter(): char
+}
+
+class RandomCharacterGenerator {
+    - uppercaseCharacters: String
+    - lowercaseCharacters: String
+    - digitCharacters: String
+    - specialCharacters: String
+    - allowedCharacters: String
+    - randomDevice: random_device
+}
+
+interface StringShufflerBase {
+    + Shuffle(characters: String): String
+}
+
+class StringShuffler {
+    - randomDevice: random_device
 }
 
 ArgumentValidatorBase <|-- ArgumentValidator
 ArgumentProcessorBase <|-- ArgumentProcessor
 TerminalBase <|-- Terminal
 PasswordGeneratorBase <|-- PasswordGenerator
+RandomCharacterGeneratorBase <|-- RandomCharacterGenerator
+StringShufflerBase <|-- StringShuffler
 ProgramBase <|-- Program
 
 Program *--l ArgumentProcessorBase
@@ -49,4 +79,7 @@ Program *--l ArgumentProcessorBase
 ArgumentProcessor *--l ArgumentValidatorBase
 ArgumentProcessor *--d PasswordGeneratorBase
 ArgumentProcessor *--r TerminalBase
+
+PasswordGenerator *--l RandomCharacterGeneratorBase
+PasswordGenerator *--r StringShufflerBase
 @enduml

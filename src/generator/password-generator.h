@@ -1,32 +1,27 @@
 #pragma once
 
 #include "password-generator-base.h"
+#include "../shuffler/string-shuffler-base.h"
+#include "random-character-generator-base.h"
 
+using generator::RandomCharacterGeneratorBase;
+using shuffler::StringShufflerBase;
 using std::string;
+using std::unique_ptr;
 
 namespace generator
 {
     class PasswordGenerator : public PasswordGeneratorBase
     {
     private:
-        int PASSWORD_LENGTH;
+        int passwordLength;
 
-        string UPPERCASE_CHARACTERS;
+        unique_ptr<StringShufflerBase> stringShuffler;
 
-        string LOWERCASE_CHARACTERS;
-
-        string DIGIT_CHARACTERS;
-
-        string SPECIAL_CHARACTERS;
-
-        string UNION_OF_ALLOWED_CHARACTERS;
-
-        static char GetRandomCharacter(string characters);
-
-        static string Shuffle(string stringToShuffle);
+        unique_ptr<RandomCharacterGeneratorBase> randomCharacterGenerator;
 
     public:
-        PasswordGenerator();
+        PasswordGenerator(unique_ptr<StringShufflerBase> &stringShuffler, unique_ptr<RandomCharacterGeneratorBase> &randomCharacterGenerator);
 
         virtual ~PasswordGenerator();
 
