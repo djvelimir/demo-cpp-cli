@@ -11,6 +11,6 @@ namespace display
     public:
         virtual ~Terminal();
 
-        void Show(string message);
+        void Show(const string& message);
     };
 }

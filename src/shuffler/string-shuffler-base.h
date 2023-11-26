@@ -11,6 +11,6 @@ namespace shuffler
     public:
         virtual ~StringShufflerBase();
 
-        virtual string Shuffle(string characters) = 0;
+        virtual string& Shuffle(string& characters) = 0;
     };
 }

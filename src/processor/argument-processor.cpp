@@ -1,6 +1,6 @@
 #include "argument-processor.h"
 
-using std::move;
+using std::vector;
 using std::string;
 using std::unique_ptr;
 
@@ -8,16 +8,16 @@ namespace processor
 {
     ArgumentProcessor::ArgumentProcessor(unique_ptr<ArgumentValidatorBase> &argumentValidator, unique_ptr<PasswordGeneratorBase> &passwordGenerator, unique_ptr<TerminalBase> &terminal)
     {
-        this->argumentValidator = move(argumentValidator);
-        this->passwordGenerator = move(passwordGenerator);
-        this->terminal = move(terminal);
+        this->argumentValidator = std::move(argumentValidator);
+        this->passwordGenerator = std::move(passwordGenerator);
+        this->terminal = std::move(terminal);
     }
 
     ArgumentProcessor::~ArgumentProcessor(){};
 
-    void ArgumentProcessor::Process(char *args[], int length)
+    void ArgumentProcessor::Process(const vector<string>& args)
     {
-        if (!argumentValidator->Validate(args, length))
+        if (!argumentValidator->Validate(args))
         {
             string usage = "Usage:\n./demo-cpp-cli generate password";
             terminal->Show(usage);

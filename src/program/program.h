@@ -5,6 +5,8 @@
 
 using processor::ArgumentProcessorBase;
 using std::unique_ptr;
+using std::vector;
+using std::string;
 
 namespace program
 {
@@ -18,6 +20,6 @@ namespace program
 
         virtual ~Program();
 
-        void Start(char *args[], int length);
+        void Start(const vector<string>& args);
     };
 }

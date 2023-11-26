@@ -2,6 +2,9 @@
 
 #include <iostream>
 
+using std::vector;
+using std::string;
+
 namespace processor
 {
     class ArgumentProcessorBase
@@ -9,6 +12,6 @@ namespace processor
     public:
         virtual ~ArgumentProcessorBase();
 
-        virtual void Process(char *args[], int length) = 0;
+        virtual void Process(const vector<string>& args) = 0;
     };
 }

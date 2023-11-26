@@ -2,6 +2,9 @@
 
 #include <iostream>
 
+using std::vector;
+using std::string;
+
 namespace program
 {
     class ProgramBase
@@ -9,6 +12,6 @@ namespace program
     public:
         virtual ~ProgramBase();
 
-        virtual void Start(char *args[], int length) = 0;
+        virtual void Start(const vector<string>& args) = 0;
     };
 }

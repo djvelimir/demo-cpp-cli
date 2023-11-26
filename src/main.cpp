@@ -26,13 +26,17 @@ using program::Program;
 using program::ProgramBase;
 using shuffler::StringShuffler;
 using shuffler::StringShufflerBase;
+using std::vector;
+using std::string;
 using std::make_unique;
 using std::unique_ptr;
 using validator::ArgumentValidator;
 using validator::ArgumentValidatorBase;
 
-int main(int length, char *args[])
+int main(int argc, char *argv[])
 {
+    vector<string> args = vector<string>(argv, argv + argc);
+
     unique_ptr<ArgumentValidatorBase> argumentValidator = make_unique<ArgumentValidator>();
     unique_ptr<StringShufflerBase> stringShuffler = make_unique<StringShuffler>();
     unique_ptr<RandomCharacterGeneratorBase> randomCharacterGenerator = make_unique<RandomCharacterGenerator>();
@@ -41,5 +45,6 @@ int main(int length, char *args[])
     unique_ptr<ArgumentProcessorBase> argumentProcessor = make_unique<ArgumentProcessor>(argumentValidator, passwordGenerator, terminal);
 
     unique_ptr<ProgramBase> program = make_unique<Program>(argumentProcessor);
-    program->Start(args, length);
+
+    program->Start(args);
 }

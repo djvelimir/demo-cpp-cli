@@ -8,6 +8,8 @@
 using display::TerminalBase;
 using generator::PasswordGeneratorBase;
 using std::unique_ptr;
+using std::vector;
+using std::string;
 using validator::ArgumentValidatorBase;
 
 namespace processor
@@ -26,6 +28,6 @@ namespace processor
 
         virtual ~ArgumentProcessor();
 
-        void Process(char *args[], int length);
+        void Process(const vector<string>&  args);
     };
 }

@@ -8,7 +8,7 @@ namespace display
 {
     Terminal::~Terminal(){};
 
-    void Terminal::Show(string message)
+    void Terminal::Show(const string& message)
     {
         cout << message << endl;
     }

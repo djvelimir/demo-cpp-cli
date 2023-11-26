@@ -1,7 +1,6 @@
 #include "random-character-generator.h"
 #include <random>
 
-using std::move;
 using std::mt19937;
 using std::string;
 using std::uniform_int_distribution;

@@ -7,8 +7,8 @@ namespace generator
     PasswordGenerator::PasswordGenerator(unique_ptr<StringShufflerBase> &stringShuffler, unique_ptr<RandomCharacterGeneratorBase> &randomCharacterGenerator)
     {
         this->passwordLength = 16;
-        this->stringShuffler = move(stringShuffler);
-        this->randomCharacterGenerator = move(randomCharacterGenerator);
+        this->stringShuffler = std::move(stringShuffler);
+        this->randomCharacterGenerator = std::move(randomCharacterGenerator);
     }
 
     PasswordGenerator::~PasswordGenerator(){};

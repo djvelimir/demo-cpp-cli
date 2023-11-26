@@ -2,6 +2,9 @@
 
 #include "argument-validator-base.h"
 
+using std::vector;
+using std::string;
+
 namespace validator
 {
     class ArgumentValidator : public ArgumentValidatorBase
@@ -9,6 +12,6 @@ namespace validator
     public:
         virtual ~ArgumentValidator();
 
-        bool Validate(char *args[], int length);
+        bool Validate(const vector<string>& args);
     };
 }
