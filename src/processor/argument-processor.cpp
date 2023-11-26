@@ -2,15 +2,15 @@
 
 using std::vector;
 using std::string;
-using std::unique_ptr;
+using std::shared_ptr;
 
 namespace processor
 {
-    ArgumentProcessor::ArgumentProcessor(unique_ptr<ArgumentValidatorBase> &argumentValidator, unique_ptr<PasswordGeneratorBase> &passwordGenerator, unique_ptr<TerminalBase> &terminal)
+    ArgumentProcessor::ArgumentProcessor(shared_ptr<ArgumentValidatorBase>& argumentValidator, shared_ptr<PasswordGeneratorBase>& passwordGenerator, shared_ptr<TerminalBase>& terminal)
     {
-        this->argumentValidator = std::move(argumentValidator);
-        this->passwordGenerator = std::move(passwordGenerator);
-        this->terminal = std::move(terminal);
+        this->argumentValidator = argumentValidator;
+        this->passwordGenerator = passwordGenerator;
+        this->terminal = terminal;
     }
 
     ArgumentProcessor::~ArgumentProcessor(){};

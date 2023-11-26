@@ -28,8 +28,8 @@ using shuffler::StringShuffler;
 using shuffler::StringShufflerBase;
 using std::vector;
 using std::string;
-using std::make_unique;
-using std::unique_ptr;
+using std::make_shared;
+using std::shared_ptr;
 using validator::ArgumentValidator;
 using validator::ArgumentValidatorBase;
 
@@ -37,14 +37,14 @@ int main(int argc, char *argv[])
 {
     vector<string> args = vector<string>(argv, argv + argc);
 
-    unique_ptr<ArgumentValidatorBase> argumentValidator = make_unique<ArgumentValidator>();
-    unique_ptr<StringShufflerBase> stringShuffler = make_unique<StringShuffler>();
-    unique_ptr<RandomCharacterGeneratorBase> randomCharacterGenerator = make_unique<RandomCharacterGenerator>();
-    unique_ptr<PasswordGeneratorBase> passwordGenerator = make_unique<PasswordGenerator>(stringShuffler, randomCharacterGenerator);
-    unique_ptr<TerminalBase> terminal = make_unique<Terminal>();
-    unique_ptr<ArgumentProcessorBase> argumentProcessor = make_unique<ArgumentProcessor>(argumentValidator, passwordGenerator, terminal);
+    shared_ptr<ArgumentValidatorBase> argumentValidator = make_shared<ArgumentValidator>();
+    shared_ptr<StringShufflerBase> stringShuffler = make_shared<StringShuffler>();
+    shared_ptr<RandomCharacterGeneratorBase> randomCharacterGenerator = make_shared<RandomCharacterGenerator>();
+    shared_ptr<PasswordGeneratorBase> passwordGenerator = make_shared<PasswordGenerator>(stringShuffler, randomCharacterGenerator);
+    shared_ptr<TerminalBase> terminal = make_shared<Terminal>();
+    shared_ptr<ArgumentProcessorBase> argumentProcessor = make_shared<ArgumentProcessor>(argumentValidator, passwordGenerator, terminal);
 
-    unique_ptr<ProgramBase> program = make_unique<Program>(argumentProcessor);
+    shared_ptr<ProgramBase> program = make_shared<Program>(argumentProcessor);
 
     program->Start(args);
 }

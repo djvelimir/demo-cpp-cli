@@ -7,7 +7,7 @@
 using generator::RandomCharacterGeneratorBase;
 using shuffler::StringShufflerBase;
 using std::string;
-using std::unique_ptr;
+using std::shared_ptr;
 
 namespace generator
 {
@@ -16,12 +16,12 @@ namespace generator
     private:
         int passwordLength;
 
-        unique_ptr<StringShufflerBase> stringShuffler;
+        shared_ptr<StringShufflerBase> stringShuffler;
 
-        unique_ptr<RandomCharacterGeneratorBase> randomCharacterGenerator;
+        shared_ptr<RandomCharacterGeneratorBase> randomCharacterGenerator;
 
     public:
-        PasswordGenerator(unique_ptr<StringShufflerBase> &stringShuffler, unique_ptr<RandomCharacterGeneratorBase> &randomCharacterGenerator);
+        PasswordGenerator(shared_ptr<StringShufflerBase>& stringShuffler, shared_ptr<RandomCharacterGeneratorBase>& randomCharacterGenerator);
 
         virtual ~PasswordGenerator();
 
