@@ -8,8 +8,8 @@
 using display::TerminalBase;
 using generator::PasswordGeneratorBase;
 using std::shared_ptr;
-using std::vector;
 using std::string;
+using std::vector;
 using validator::ArgumentValidatorBase;
 
 namespace processor
@@ -24,10 +24,10 @@ namespace processor
         shared_ptr<TerminalBase> terminal;
 
     public:
-        ArgumentProcessor(shared_ptr<ArgumentValidatorBase>& argumentValidator, shared_ptr<PasswordGeneratorBase>& passwordGenerator, shared_ptr<TerminalBase>& terminal);
+        ArgumentProcessor(shared_ptr<ArgumentValidatorBase> &argumentValidator, shared_ptr<PasswordGeneratorBase> &passwordGenerator, shared_ptr<TerminalBase> &terminal);
 
         virtual ~ArgumentProcessor();
 
-        void Process(const vector<string>&  args);
+        void Process(const vector<string> &args);
     };
 }

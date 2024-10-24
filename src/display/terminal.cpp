@@ -6,9 +6,9 @@ using std::string;
 
 namespace display
 {
-    Terminal::~Terminal(){};
+    Terminal::~Terminal() {};
 
-    void Terminal::Show(const string& message)
+    void Terminal::Show(const string &message)
     {
         cout << message << endl;
     }

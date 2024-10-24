@@ -2,5 +2,5 @@
 
 namespace generator
 {
-    RandomCharacterGeneratorBase::~RandomCharacterGeneratorBase(){};
+    RandomCharacterGeneratorBase::~RandomCharacterGeneratorBase() {};
 }

@@ -2,5 +2,5 @@
 
 namespace display
 {
-    TerminalBase::~TerminalBase(){};
+    TerminalBase::~TerminalBase() {};
 }

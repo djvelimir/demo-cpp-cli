@@ -2,8 +2,8 @@
 
 #include "argument-validator-base.h"
 
-using std::vector;
 using std::string;
+using std::vector;
 
 namespace validator
 {
@@ -12,6 +12,6 @@ namespace validator
     public:
         virtual ~ArgumentValidator();
 
-        bool Validate(const vector<string>& args);
+        bool Validate(const vector<string> &args);
     };
 }

@@ -4,14 +4,14 @@ using std::string;
 
 namespace generator
 {
-    PasswordGenerator::PasswordGenerator(shared_ptr<StringShufflerBase>& stringShuffler, shared_ptr<RandomCharacterGeneratorBase>& randomCharacterGenerator)
+    PasswordGenerator::PasswordGenerator(shared_ptr<StringShufflerBase> &stringShuffler, shared_ptr<RandomCharacterGeneratorBase> &randomCharacterGenerator)
     {
         this->passwordLength = 16;
         this->stringShuffler = stringShuffler;
         this->randomCharacterGenerator = randomCharacterGenerator;
     }
 
-    PasswordGenerator::~PasswordGenerator(){};
+    PasswordGenerator::~PasswordGenerator() {};
 
     string PasswordGenerator::Generate()
     {

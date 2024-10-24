@@ -2,5 +2,5 @@
 
 namespace processor
 {
-    ArgumentProcessorBase::~ArgumentProcessorBase(){};
+    ArgumentProcessorBase::~ArgumentProcessorBase() {};
 }

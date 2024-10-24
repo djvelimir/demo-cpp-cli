@@ -2,5 +2,5 @@
 
 namespace validator
 {
-    ArgumentValidatorBase::~ArgumentValidatorBase(){};
+    ArgumentValidatorBase::~ArgumentValidatorBase() {};
 }

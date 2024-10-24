@@ -2,8 +2,8 @@
 
 #include <iostream>
 
-using std::vector;
 using std::string;
+using std::vector;
 
 namespace validator
 {
@@ -12,6 +12,6 @@ namespace validator
     public:
         virtual ~ArgumentValidatorBase();
 
-        virtual bool Validate(const vector<string>&  args) = 0;
+        virtual bool Validate(const vector<string> &args) = 0;
     };
 }

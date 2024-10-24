@@ -19,7 +19,7 @@ namespace generator
                             specialCharacters;
     }
 
-    RandomCharacterGenerator::~RandomCharacterGenerator(){};
+    RandomCharacterGenerator::~RandomCharacterGenerator() {};
 
     char RandomCharacterGenerator::GenerateUppercaseCharacter()
     {

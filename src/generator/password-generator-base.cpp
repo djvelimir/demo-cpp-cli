@@ -2,5 +2,5 @@
 
 namespace generator
 {
-    PasswordGeneratorBase::~PasswordGeneratorBase(){};
+    PasswordGeneratorBase::~PasswordGeneratorBase() {};
 }

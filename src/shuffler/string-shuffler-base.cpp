@@ -2,5 +2,5 @@
 
 namespace shuffler
 {
-    StringShufflerBase::~StringShufflerBase(){};
+    StringShufflerBase::~StringShufflerBase() {};
 }

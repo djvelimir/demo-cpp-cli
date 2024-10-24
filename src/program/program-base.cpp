@@ -2,5 +2,5 @@
 
 namespace program
 {
-    ProgramBase::~ProgramBase(){};
+    ProgramBase::~ProgramBase() {};
 }

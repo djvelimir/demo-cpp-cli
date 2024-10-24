@@ -26,10 +26,10 @@ using program::Program;
 using program::ProgramBase;
 using shuffler::StringShuffler;
 using shuffler::StringShufflerBase;
-using std::vector;
-using std::string;
 using std::make_shared;
 using std::shared_ptr;
+using std::string;
+using std::vector;
 using validator::ArgumentValidator;
 using validator::ArgumentValidatorBase;
 

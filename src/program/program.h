@@ -5,8 +5,8 @@
 
 using processor::ArgumentProcessorBase;
 using std::shared_ptr;
-using std::vector;
 using std::string;
+using std::vector;
 
 namespace program
 {
@@ -16,10 +16,10 @@ namespace program
         shared_ptr<ArgumentProcessorBase> argumentProcessor;
 
     public:
-        Program(shared_ptr<ArgumentProcessorBase>& argumentProcessor);
+        Program(shared_ptr<ArgumentProcessorBase> &argumentProcessor);
 
         virtual ~Program();
 
-        void Start(const vector<string>& args);
+        void Start(const vector<string> &args);
     };
 }

@@ -8,7 +8,7 @@ namespace shuffler
 {
     StringShuffler::~StringShuffler() {}
 
-    string& StringShuffler::Shuffle(string& characters)
+    string &StringShuffler::Shuffle(string &characters)
     {
         mt19937 gen(randomDevice());
         shuffle(characters.begin(), characters.end(), gen);
