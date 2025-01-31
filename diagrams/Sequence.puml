@@ -1,4 +1,5 @@
 @startuml Sequence
+!theme amiga
 participant Program as program
 participant ArgumentProcessor as argumentProcessor
 participant ArgumentValidator as argumentValidator
