@@ -18,7 +18,7 @@ activate argumentValidator
 argumentProcessor <-- argumentValidator: return are arguments valid
 deactivate argumentValidator
 
-alt#Gold #LightBlue Arguments are valid
+alt#Gold Arguments are valid
     argumentProcessor -> passwordGenerator: Generate()
     activate passwordGenerator
 
@@ -73,7 +73,7 @@ alt#Gold #LightBlue Arguments are valid
     argumentProcessor <-- terminal
     deactivate terminal
 
-else #Pink Arguments are not valid
+else Arguments are not valid
     argumentProcessor -> terminal: Show(usage)
     activate terminal
     argumentProcessor <-- terminal
