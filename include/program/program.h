@@ -1,22 +1,23 @@
 #pragma once
 
+#include <string>
+#include <vector>
+
 #include "program/program_base.h"
 #include "processor/argument_processor_base.h"
-
-using processor::ArgumentProcessorBase;
 
 namespace program
 {
     class Program : public ProgramBase
     {
     private:
-        const ArgumentProcessorBase &argumentProcessor;
+        const processor::ArgumentProcessorBase &argumentProcessor;
 
     public:
-        Program(const ArgumentProcessorBase &argumentProcessor);
+        Program(const processor::ArgumentProcessorBase &argumentProcessor);
 
         virtual ~Program();
 
-        void Start(const vector<string> &args) const;
+        void Start(const std::vector<std::string> &args) const;
     };
 }

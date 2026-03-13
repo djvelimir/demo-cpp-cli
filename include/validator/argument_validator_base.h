@@ -1,9 +1,7 @@
 #pragma once
 
-#include <iostream>
-
-using std::string;
-using std::vector;
+#include <string>
+#include <vector>
 
 namespace validator
 {
@@ -12,6 +10,6 @@ namespace validator
     public:
         virtual ~ArgumentValidatorBase();
 
-        virtual bool Validate(const vector<string> &args) const = 0;
+        virtual bool Validate(const std::vector<std::string> &args) const = 0;
     };
 }

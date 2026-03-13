@@ -1,4 +1,10 @@
 #include "program/program.h"
+#include <string>
+#include <vector>
+
+using processor::ArgumentProcessorBase;
+using std::string;
+using std::vector;
 
 namespace program
 {

@@ -1,8 +1,6 @@
 #pragma once
 
-#include <iostream>
-
-using std::string;
+#include <string>
 
 namespace display
 {
@@ -11,6 +9,6 @@ namespace display
     public:
         virtual ~TerminalBase();
 
-        virtual void Show(const string &message) const = 0;
+        virtual void Show(const std::string &message) const = 0;
     };
 }

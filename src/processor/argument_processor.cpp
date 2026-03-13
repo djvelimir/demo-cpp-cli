@@ -1,4 +1,12 @@
 #include "processor/argument_processor.h"
+#include <string>
+#include <vector>
+
+using display::TerminalBase;
+using generator::PasswordGeneratorBase;
+using std::string;
+using std::vector;
+using validator::ArgumentValidatorBase;
 
 namespace processor
 {

@@ -9,6 +9,6 @@ namespace validator
     public:
         virtual ~ArgumentValidator();
 
-        bool Validate(const vector<string> &args) const;
+        bool Validate(const std::vector<std::string> &args) const;
     };
 }

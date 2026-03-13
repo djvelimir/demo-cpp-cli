@@ -1,27 +1,26 @@
 #pragma once
 
-#include "generator/random_character_generator_base.h"
+#include <string>
 #include <random>
 
-using std::random_device;
-using std::string;
+#include "generator/random_character_generator_base.h"
 
 namespace generator
 {
     class RandomCharacterGenerator : public RandomCharacterGeneratorBase
     {
     private:
-        string uppercaseCharacters;
+        std::string uppercaseCharacters;
 
-        string lowercaseCharacters;
+        std::string lowercaseCharacters;
 
-        string digitCharacters;
+        std::string digitCharacters;
 
-        string specialCharacters;
+        std::string specialCharacters;
 
-        string allowedCharacters;
+        std::string allowedCharacters;
 
-        random_device randomDevice;
+        std::random_device randomDevice;
 
     public:
         RandomCharacterGenerator();

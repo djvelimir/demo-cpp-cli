@@ -1,9 +1,7 @@
 #pragma once
 
-#include <iostream>
-
-using std::string;
-using std::vector;
+#include <string>
+#include <vector>
 
 namespace processor
 {
@@ -12,6 +10,6 @@ namespace processor
     public:
         virtual ~ArgumentProcessorBase();
 
-        virtual void Process(const vector<string> &args) const = 0;
+        virtual void Process(const std::vector<std::string> &args) const = 0;
     };
 }

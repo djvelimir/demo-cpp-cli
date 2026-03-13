@@ -1,4 +1,6 @@
-#include <iostream>
+#include <string>
+#include <vector>
+
 #include "validator/argument_validator.h"
 #include "generator/password_generator.h"
 #include "display/terminal.h"
@@ -13,6 +15,8 @@ using generator::RandomCharacterGenerator;
 using processor::ArgumentProcessor;
 using program::Program;
 using shuffler::StringShuffler;
+using std::string;
+using std::vector;
 using validator::ArgumentValidator;
 
 int main(int argc, char *argv[])

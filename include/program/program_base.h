@@ -1,9 +1,7 @@
 #pragma once
 
-#include <iostream>
-
-using std::string;
-using std::vector;
+#include <string>
+#include <vector>
 
 namespace program
 {
@@ -12,6 +10,6 @@ namespace program
     public:
         virtual ~ProgramBase();
 
-        virtual void Start(const vector<string> &args) const = 0;
+        virtual void Start(const std::vector<std::string> &args) const = 0;
     };
 }

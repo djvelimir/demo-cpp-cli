@@ -1,8 +1,6 @@
 #pragma once
 
-#include <iostream>
-
-using std::string;
+#include <string>
 
 namespace shuffler
 {
@@ -11,6 +9,6 @@ namespace shuffler
     public:
         virtual ~StringShufflerBase();
 
-        virtual string &Shuffle(string &characters) = 0;
+        virtual std::string &Shuffle(std::string &characters) = 0;
     };
 }

@@ -1,9 +1,11 @@
 #include "shuffler/string_shuffler.h"
-#include <random>
 #include <algorithm>
+#include <random>
+#include <string>
 
 using std::mt19937;
 using std::shuffle;
+using std::string;
 
 namespace shuffler
 {

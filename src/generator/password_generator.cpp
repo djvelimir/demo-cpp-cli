@@ -1,4 +1,8 @@
 #include "generator/password_generator.h"
+#include <string>
+
+using shuffler::StringShufflerBase;
+using std::string;
 
 namespace generator
 {

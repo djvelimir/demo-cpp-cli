@@ -1,8 +1,6 @@
 #pragma once
 
-#include <iostream>
-
-using std::string;
+#include <string>
 
 namespace generator
 {
@@ -11,6 +9,6 @@ namespace generator
     public:
         virtual ~PasswordGeneratorBase();
 
-        virtual string Generate() const = 0;
+        virtual std::string Generate() const = 0;
     };
 }

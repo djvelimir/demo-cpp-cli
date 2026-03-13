@@ -1,6 +1,9 @@
 #include "validator/argument_validator.h"
-#include <vector>
 #include <string>
+#include <vector>
+
+using std::string;
+using std::vector;
 
 namespace validator
 {

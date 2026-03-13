@@ -1,30 +1,29 @@
 #pragma once
 
+#include <string>
+#include <vector>
+
 #include "processor/argument_processor_base.h"
 #include "validator/argument_validator_base.h"
 #include "generator/password_generator_base.h"
 #include "display/terminal_base.h"
-
-using display::TerminalBase;
-using generator::PasswordGeneratorBase;
-using validator::ArgumentValidatorBase;
 
 namespace processor
 {
     class ArgumentProcessor : public ArgumentProcessorBase
     {
     private:
-        const ArgumentValidatorBase &argumentValidator;
+        const validator::ArgumentValidatorBase &argumentValidator;
 
-        const PasswordGeneratorBase &passwordGenerator;
+        const generator::PasswordGeneratorBase &passwordGenerator;
 
-        const TerminalBase &terminal;
+        const display::TerminalBase &terminal;
 
     public:
-        ArgumentProcessor(const ArgumentValidatorBase &argumentValidator, const PasswordGeneratorBase &passwordGenerator, const TerminalBase &terminal);
+        ArgumentProcessor(const validator::ArgumentValidatorBase &argumentValidator, const generator::PasswordGeneratorBase &passwordGenerator, const display::TerminalBase &terminal);
 
         virtual ~ArgumentProcessor();
 
-        void Process(const vector<string> &args) const;
+        void Process(const std::vector<std::string> &args) const;
     };
 }

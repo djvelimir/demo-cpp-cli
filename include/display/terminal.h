@@ -9,6 +9,6 @@ namespace display
     public:
         virtual ~Terminal();
 
-        void Show(const string &message) const;
+        void Show(const std::string &message) const;
     };
 }
