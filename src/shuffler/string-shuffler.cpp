@@ -1,5 +1,6 @@
 #include "shuffler/string-shuffler.h"
 #include <random>
+#include <algorithm>
 
 using std::mt19937;
 using std::shuffle;
