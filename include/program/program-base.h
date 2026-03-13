@@ -12,6 +12,6 @@ namespace program
     public:
         virtual ~ProgramBase();
 
-        virtual void Start(const vector<string> &args) = 0;
+        virtual void Start(const vector<string> &args) const = 0;
     };
 }

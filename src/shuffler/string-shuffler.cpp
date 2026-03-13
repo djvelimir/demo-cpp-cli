@@ -1,4 +1,4 @@
-#include "string-shuffler.h"
+#include "shuffler/string-shuffler.h"
 #include <random>
 
 using std::mt19937;

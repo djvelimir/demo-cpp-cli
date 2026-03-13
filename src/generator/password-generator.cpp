@@ -1,32 +1,30 @@
-#include "password-generator.h"
-
-using std::string;
+#include "generator/password-generator.h"
 
 namespace generator
 {
-    PasswordGenerator::PasswordGenerator(shared_ptr<StringShufflerBase> &stringShuffler, shared_ptr<RandomCharacterGeneratorBase> &randomCharacterGenerator)
+    PasswordGenerator::PasswordGenerator(StringShufflerBase &stringShuffler, RandomCharacterGeneratorBase &randomCharacterGenerator)
+        : stringShuffler(stringShuffler),
+          randomCharacterGenerator(randomCharacterGenerator)
     {
         this->passwordLength = 16;
-        this->stringShuffler = stringShuffler;
-        this->randomCharacterGenerator = randomCharacterGenerator;
     }
 
     PasswordGenerator::~PasswordGenerator() {};
 
-    string PasswordGenerator::Generate()
+    string PasswordGenerator::Generate() const
     {
         string password;
 
-        password.append(1, randomCharacterGenerator->GenerateUppercaseCharacter());
-        password.append(1, randomCharacterGenerator->GenerateLowercaseCharacter());
-        password.append(1, randomCharacterGenerator->GenerateDigitCharacter());
-        password.append(1, randomCharacterGenerator->GenerateSpecialCharacter());
+        password.append(1, randomCharacterGenerator.GenerateUppercaseCharacter());
+        password.append(1, randomCharacterGenerator.GenerateLowercaseCharacter());
+        password.append(1, randomCharacterGenerator.GenerateDigitCharacter());
+        password.append(1, randomCharacterGenerator.GenerateSpecialCharacter());
 
         for (int i = 0; i < passwordLength - 4; i++)
         {
-            password.append(1, randomCharacterGenerator->GenerateAllowedCharacter());
+            password.append(1, randomCharacterGenerator.GenerateAllowedCharacter());
         }
 
-        return stringShuffler->Shuffle(password);
+        return stringShuffler.Shuffle(password);
     }
 }

@@ -1,4 +1,4 @@
-#include "terminal-base.h"
+#include "display/terminal-base.h"
 
 namespace display
 {

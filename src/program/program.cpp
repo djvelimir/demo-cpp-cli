@@ -1,20 +1,16 @@
-#include "program.h"
-
-using std::shared_ptr;
-using std::string;
-using std::vector;
+#include "program/program.h"
 
 namespace program
 {
-    Program::Program(shared_ptr<ArgumentProcessorBase> &argumentProcessor)
+    Program::Program(const ArgumentProcessorBase &argumentProcessor)
+        : argumentProcessor(argumentProcessor)
     {
-        this->argumentProcessor = argumentProcessor;
     }
 
     Program::~Program() {}
 
-    void Program::Start(const vector<string> &args)
+    void Program::Start(const vector<string> &args) const
     {
-        argumentProcessor->Process(args);
+        argumentProcessor.Process(args);
     }
 }

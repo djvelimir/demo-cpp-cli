@@ -2,8 +2,6 @@
 
 #include "terminal-base.h"
 
-using std::string;
-
 namespace display
 {
     class Terminal : public TerminalBase
@@ -11,6 +9,6 @@ namespace display
     public:
         virtual ~Terminal();
 
-        void Show(const string &message);
+        void Show(const string &message) const;
     };
 }

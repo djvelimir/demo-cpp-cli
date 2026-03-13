@@ -12,6 +12,6 @@ namespace processor
     public:
         virtual ~ArgumentProcessorBase();
 
-        virtual void Process(const vector<string> &args) = 0;
+        virtual void Process(const vector<string> &args) const = 0;
     };
 }

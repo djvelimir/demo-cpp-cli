@@ -1,4 +1,4 @@
-#include "string-shuffler-base.h"
+#include "shuffler/string-shuffler-base.h"
 
 namespace shuffler
 {

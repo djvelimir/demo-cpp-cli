@@ -23,6 +23,19 @@ add_executable(demo-cpp-cli
   src/generator/random-character-generator.cpp
 )
 
+target_include_directories(demo-cpp-cli PRIVATE include)
+
+target_compile_options(demo-cpp-cli PRIVATE
+    -Wall
+    -Wextra
+    -Wpedantic
+    -Wconversion
+    -Wshadow
+    -Wnon-virtual-dtor
+)
+
+target_compile_options(demo-cpp-cli PRIVATE -Werror)
+
 set(CPACK_PROJECT_NAME ${PROJECT_NAME})
 set(CPACK_PROJECT_VERSION ${PROJECT_VERSION})
 include(CPack)

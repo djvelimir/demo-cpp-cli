@@ -4,22 +4,19 @@
 #include "../processor/argument-processor-base.h"
 
 using processor::ArgumentProcessorBase;
-using std::shared_ptr;
-using std::string;
-using std::vector;
 
 namespace program
 {
     class Program : public ProgramBase
     {
     private:
-        shared_ptr<ArgumentProcessorBase> argumentProcessor;
+        const ArgumentProcessorBase &argumentProcessor;
 
     public:
-        Program(shared_ptr<ArgumentProcessorBase> &argumentProcessor);
+        Program(const ArgumentProcessorBase &argumentProcessor);
 
         virtual ~Program();
 
-        void Start(const vector<string> &args);
+        void Start(const vector<string> &args) const;
     };
 }

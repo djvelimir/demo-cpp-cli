@@ -1,14 +1,13 @@
-#include "terminal.h"
+#include "display/terminal.h"
 
 using std::cout;
 using std::endl;
-using std::string;
 
 namespace display
 {
     Terminal::~Terminal() {};
 
-    void Terminal::Show(const string &message)
+    void Terminal::Show(const string &message) const
     {
         cout << message << endl;
     }

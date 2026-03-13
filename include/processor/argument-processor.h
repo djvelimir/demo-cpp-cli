@@ -7,9 +7,6 @@
 
 using display::TerminalBase;
 using generator::PasswordGeneratorBase;
-using std::shared_ptr;
-using std::string;
-using std::vector;
 using validator::ArgumentValidatorBase;
 
 namespace processor
@@ -17,17 +14,17 @@ namespace processor
     class ArgumentProcessor : public ArgumentProcessorBase
     {
     private:
-        shared_ptr<ArgumentValidatorBase> argumentValidator;
+        const ArgumentValidatorBase &argumentValidator;
 
-        shared_ptr<PasswordGeneratorBase> passwordGenerator;
+        const PasswordGeneratorBase &passwordGenerator;
 
-        shared_ptr<TerminalBase> terminal;
+        const TerminalBase &terminal;
 
     public:
-        ArgumentProcessor(shared_ptr<ArgumentValidatorBase> &argumentValidator, shared_ptr<PasswordGeneratorBase> &passwordGenerator, shared_ptr<TerminalBase> &terminal);
+        ArgumentProcessor(const ArgumentValidatorBase &argumentValidator, const PasswordGeneratorBase &passwordGenerator, const TerminalBase &terminal);
 
         virtual ~ArgumentProcessor();
 
-        void Process(const vector<string> &args);
+        void Process(const vector<string> &args) const;
     };
 }

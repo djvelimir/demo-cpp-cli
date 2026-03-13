@@ -1,8 +1,7 @@
-#include "random-character-generator.h"
+#include "generator/random-character-generator.h"
 #include <random>
 
 using std::mt19937;
-using std::string;
 using std::uniform_int_distribution;
 
 namespace generator
@@ -24,8 +23,8 @@ namespace generator
     char RandomCharacterGenerator::GenerateUppercaseCharacter()
     {
         mt19937 gen(randomDevice());
-        uniform_int_distribution<> dis(0, uppercaseCharacters.length() - 1);
-        int randomIndex = dis(gen);
+        uniform_int_distribution<size_t> dis(0, uppercaseCharacters.length() - 1);
+        size_t randomIndex = dis(gen);
 
         return uppercaseCharacters[randomIndex];
     }
@@ -33,8 +32,8 @@ namespace generator
     char RandomCharacterGenerator::GenerateLowercaseCharacter()
     {
         mt19937 gen(randomDevice());
-        uniform_int_distribution<> dis(0, lowercaseCharacters.length() - 1);
-        int randomIndex = dis(gen);
+        uniform_int_distribution<size_t> dis(0, lowercaseCharacters.length() - 1);
+        size_t randomIndex = dis(gen);
 
         return lowercaseCharacters[randomIndex];
     }
@@ -42,8 +41,8 @@ namespace generator
     char RandomCharacterGenerator::GenerateDigitCharacter()
     {
         mt19937 gen(randomDevice());
-        uniform_int_distribution<> dis(0, digitCharacters.length() - 1);
-        int randomIndex = dis(gen);
+        uniform_int_distribution<size_t> dis(0, digitCharacters.length() - 1);
+        size_t randomIndex = dis(gen);
 
         return digitCharacters[randomIndex];
     }
@@ -51,8 +50,8 @@ namespace generator
     char RandomCharacterGenerator::GenerateSpecialCharacter()
     {
         mt19937 gen(randomDevice());
-        uniform_int_distribution<> dis(0, specialCharacters.length() - 1);
-        int randomIndex = dis(gen);
+        uniform_int_distribution<size_t> dis(0, specialCharacters.length() - 1);
+        size_t randomIndex = dis(gen);
 
         return specialCharacters[randomIndex];
     }
@@ -60,8 +59,8 @@ namespace generator
     char RandomCharacterGenerator::GenerateAllowedCharacter()
     {
         mt19937 gen(randomDevice());
-        uniform_int_distribution<> dis(0, allowedCharacters.length() - 1);
-        int randomIndex = dis(gen);
+        uniform_int_distribution<size_t> dis(0, allowedCharacters.length() - 1);
+        size_t randomIndex = dis(gen);
 
         return allowedCharacters[randomIndex];
     }

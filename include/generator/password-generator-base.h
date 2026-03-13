@@ -11,6 +11,6 @@ namespace generator
     public:
         virtual ~PasswordGeneratorBase();
 
-        virtual string Generate() = 0;
+        virtual string Generate() const = 0;
     };
 }

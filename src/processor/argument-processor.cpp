@@ -1,30 +1,26 @@
-#include "argument-processor.h"
-
-using std::shared_ptr;
-using std::string;
-using std::vector;
+#include "processor/argument-processor.h"
 
 namespace processor
 {
-    ArgumentProcessor::ArgumentProcessor(shared_ptr<ArgumentValidatorBase> &argumentValidator, shared_ptr<PasswordGeneratorBase> &passwordGenerator, shared_ptr<TerminalBase> &terminal)
+    ArgumentProcessor::ArgumentProcessor(const ArgumentValidatorBase &argumentValidator, const PasswordGeneratorBase &passwordGenerator, const TerminalBase &terminal)
+        : argumentValidator(argumentValidator),
+          passwordGenerator(passwordGenerator),
+          terminal(terminal)
     {
-        this->argumentValidator = argumentValidator;
-        this->passwordGenerator = passwordGenerator;
-        this->terminal = terminal;
     }
 
     ArgumentProcessor::~ArgumentProcessor() {};
 
-    void ArgumentProcessor::Process(const vector<string> &args)
+    void ArgumentProcessor::Process(const vector<string> &args) const
     {
-        if (!argumentValidator->Validate(args))
+        if (!argumentValidator.Validate(args))
         {
-            string usage = "Usage:\n./demo-cpp-cli generate password";
-            terminal->Show(usage);
+            const string usage = "Usage:\n./demo-cpp-cli generate password";
+            terminal.Show(usage);
             return;
         }
 
-        string password = passwordGenerator->Generate();
-        terminal->Show(password);
+        string password = passwordGenerator.Generate();
+        terminal.Show(password);
     }
 }

@@ -1,13 +1,10 @@
-#include "argument-validator.h"
-
-using std::vector;
-using std::string;
+#include "validator/argument-validator.h"
 
 namespace validator
 {
-    ArgumentValidator::~ArgumentValidator(){};
+    ArgumentValidator::~ArgumentValidator() {};
 
-    bool ArgumentValidator::Validate(const vector<string>& args)
+    bool ArgumentValidator::Validate(const vector<string> &args) const
     {
         return args.size() == 3 && args[1] == "generate" && args[2] == "password";
     }

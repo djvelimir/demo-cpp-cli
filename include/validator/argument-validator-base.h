@@ -12,6 +12,6 @@ namespace validator
     public:
         virtual ~ArgumentValidatorBase();
 
-        virtual bool Validate(const vector<string> &args) = 0;
+        virtual bool Validate(const vector<string> &args) const = 0;
     };
 }
