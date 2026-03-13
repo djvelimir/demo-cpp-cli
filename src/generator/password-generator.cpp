@@ -9,7 +9,7 @@ namespace generator
         this->passwordLength = 16;
     }
 
-    PasswordGenerator::~PasswordGenerator() {};
+    PasswordGenerator::~PasswordGenerator() {}
 
     string PasswordGenerator::Generate() const
     {

@@ -4,7 +4,7 @@
 
 namespace validator
 {
-    ArgumentValidator::~ArgumentValidator() {};
+    ArgumentValidator::~ArgumentValidator() {}
 
     bool ArgumentValidator::Validate(const vector<string> &args) const
     {

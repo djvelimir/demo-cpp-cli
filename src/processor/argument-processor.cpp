@@ -9,7 +9,7 @@ namespace processor
     {
     }
 
-    ArgumentProcessor::~ArgumentProcessor() {};
+    ArgumentProcessor::~ArgumentProcessor() {}
 
     void ArgumentProcessor::Process(const vector<string> &args) const
     {
