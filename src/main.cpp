@@ -1,11 +1,11 @@
 #include <iostream>
-#include "validator/argument-validator.h"
-#include "generator/password-generator.h"
+#include "validator/argument_validator.h"
+#include "generator/password_generator.h"
 #include "display/terminal.h"
-#include "processor/argument-processor.h"
+#include "processor/argument_processor.h"
 #include "program/program.h"
-#include "shuffler/string-shuffler.h"
-#include "generator/random-character-generator.h"
+#include "shuffler/string_shuffler.h"
+#include "generator/random_character_generator.h"
 
 using display::Terminal;
 using generator::PasswordGenerator;

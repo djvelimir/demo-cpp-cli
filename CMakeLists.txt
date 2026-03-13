@@ -7,20 +7,20 @@ enable_testing()
 
 add_executable(demo-cpp-cli
   src/main.cpp
-  src/processor/argument-processor-base.cpp
-  src/processor/argument-processor.cpp
-  src/validator/argument-validator-base.cpp
-  src/validator/argument-validator.cpp
-  src/generator/password-generator-base.cpp
-  src/generator/password-generator.cpp
-  src/program/program-base.cpp
+  src/processor/argument_processor_base.cpp
+  src/processor/argument_processor.cpp
+  src/validator/argument_validator_base.cpp
+  src/validator/argument_validator.cpp
+  src/generator/password_generator_base.cpp
+  src/generator/password_generator.cpp
+  src/program/program_base.cpp
   src/program/program.cpp
-  src/display/terminal-base.cpp
+  src/display/terminal_base.cpp
   src/display/terminal.cpp
-  src/shuffler/string-shuffler-base.cpp
-  src/shuffler/string-shuffler.cpp
-  src/generator/random-character-generator-base.cpp
-  src/generator/random-character-generator.cpp
+  src/shuffler/string_shuffler_base.cpp
+  src/shuffler/string_shuffler.cpp
+  src/generator/random_character_generator_base.cpp
+  src/generator/random_character_generator.cpp
 )
 
 target_include_directories(demo-cpp-cli PRIVATE include)

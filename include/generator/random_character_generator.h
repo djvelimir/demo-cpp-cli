@@ -1,6 +1,6 @@
 #pragma once
 
-#include "random-character-generator-base.h"
+#include "generator/random_character_generator_base.h"
 #include <random>
 
 using std::random_device;

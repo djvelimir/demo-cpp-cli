@@ -1,6 +1,6 @@
 #pragma once
 
-#include "string-shuffler-base.h"
+#include "shuffler/string_shuffler_base.h"
 #include <random>
 
 using std::random_device;

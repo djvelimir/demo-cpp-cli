@@ -1,4 +1,4 @@
-#include "generator/random-character-generator-base.h"
+#include "generator/random_character_generator_base.h"
 
 namespace generator
 {

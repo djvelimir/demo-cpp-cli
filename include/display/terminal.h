@@ -1,6 +1,6 @@
 #pragma once
 
-#include "terminal-base.h"
+#include "display/terminal_base.h"
 
 namespace display
 {

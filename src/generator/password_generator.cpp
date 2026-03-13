@@ -1,4 +1,4 @@
-#include "generator/password-generator.h"
+#include "generator/password_generator.h"
 
 namespace generator
 {

@@ -1,9 +1,9 @@
 #pragma once
 
-#include "argument-processor-base.h"
-#include "../validator/argument-validator-base.h"
-#include "../generator/password-generator-base.h"
-#include "../display/terminal-base.h"
+#include "processor/argument_processor_base.h"
+#include "validator/argument_validator_base.h"
+#include "generator/password_generator_base.h"
+#include "display/terminal_base.h"
 
 using display::TerminalBase;
 using generator::PasswordGeneratorBase;

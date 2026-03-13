@@ -1,4 +1,4 @@
-#include "shuffler/string-shuffler.h"
+#include "shuffler/string_shuffler.h"
 #include <random>
 #include <algorithm>
 

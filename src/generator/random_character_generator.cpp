@@ -1,4 +1,4 @@
-#include "generator/random-character-generator.h"
+#include "generator/random_character_generator.h"
 #include <random>
 
 using std::mt19937;

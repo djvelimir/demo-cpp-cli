@@ -1,8 +1,8 @@
 #pragma once
 
-#include "password-generator-base.h"
-#include "../shuffler/string-shuffler-base.h"
-#include "random-character-generator-base.h"
+#include "generator/password_generator_base.h"
+#include "shuffler/string_shuffler_base.h"
+#include "generator/random_character_generator_base.h"
 
 using generator::RandomCharacterGeneratorBase;
 using shuffler::StringShufflerBase;

@@ -1,7 +1,7 @@
 #pragma once
 
-#include "program-base.h"
-#include "../processor/argument-processor-base.h"
+#include "program/program_base.h"
+#include "processor/argument_processor_base.h"
 
 using processor::ArgumentProcessorBase;
 
