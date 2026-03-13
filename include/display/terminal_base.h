@@ -7,7 +7,7 @@ namespace display
     class TerminalBase
     {
     public:
-        virtual ~TerminalBase();
+        virtual ~TerminalBase() = default;
 
         virtual void Show(const std::string &message) const = 0;
     };

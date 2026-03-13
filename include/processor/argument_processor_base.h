@@ -8,7 +8,7 @@ namespace processor
     class ArgumentProcessorBase
     {
     public:
-        virtual ~ArgumentProcessorBase();
+        virtual ~ArgumentProcessorBase() = default;
 
         virtual void Process(const std::vector<std::string> &args) const = 0;
     };

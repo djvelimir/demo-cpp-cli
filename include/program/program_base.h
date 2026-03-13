@@ -8,7 +8,7 @@ namespace program
     class ProgramBase
     {
     public:
-        virtual ~ProgramBase();
+        virtual ~ProgramBase() = default;
 
         virtual void Start(const std::vector<std::string> &args) const = 0;
     };

@@ -7,7 +7,7 @@ namespace generator
     class PasswordGeneratorBase
     {
     public:
-        virtual ~PasswordGeneratorBase();
+        virtual ~PasswordGeneratorBase() = default;
 
         virtual std::string Generate() const = 0;
     };

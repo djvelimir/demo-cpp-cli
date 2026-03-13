@@ -5,7 +5,7 @@ namespace generator
     class RandomCharacterGeneratorBase
     {
     public:
-        virtual ~RandomCharacterGeneratorBase();
+        virtual ~RandomCharacterGeneratorBase() = default;
 
         virtual char GenerateUppercaseCharacter() = 0;
 

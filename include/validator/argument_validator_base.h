@@ -8,7 +8,7 @@ namespace validator
     class ArgumentValidatorBase
     {
     public:
-        virtual ~ArgumentValidatorBase();
+        virtual ~ArgumentValidatorBase() = default;
 
         virtual bool Validate(const std::vector<std::string> &args) const = 0;
     };
