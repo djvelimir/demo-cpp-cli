@@ -7,8 +7,8 @@ namespace validator
     class ArgumentValidator : public ArgumentValidatorBase
     {
     public:
-        virtual ~ArgumentValidator();
+        ~ArgumentValidator() override = default;
 
-        bool Validate(const std::vector<std::string> &args) const;
+        bool Validate(const std::vector<std::string> &args) const override;
     };
 }

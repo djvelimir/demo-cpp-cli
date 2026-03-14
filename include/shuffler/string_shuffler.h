@@ -11,10 +11,12 @@ namespace shuffler
     {
     private:
         std::random_device randomDevice;
+        std::mt19937 generator;
 
     public:
-        virtual ~StringShuffler();
+        StringShuffler();
+        ~StringShuffler() override = default;
 
-        std::string &Shuffle(std::string &characters);
+        std::string &Shuffle(std::string &characters) override;
     };
 }

@@ -7,8 +7,8 @@ namespace display
     class Terminal : public TerminalBase
     {
     public:
-        virtual ~Terminal();
+        ~Terminal() override = default;
 
-        void Show(const std::string &message) const;
+        void Show(const std::string &message) const override;
     };
 }

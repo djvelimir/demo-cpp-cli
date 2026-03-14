@@ -22,8 +22,8 @@ namespace processor
     public:
         ArgumentProcessor(const validator::ArgumentValidatorBase &argumentValidator, const generator::PasswordGeneratorBase &passwordGenerator, const display::TerminalBase &terminal);
 
-        virtual ~ArgumentProcessor();
+        ~ArgumentProcessor() override = default;
 
-        void Process(const std::vector<std::string> &args) const;
+        void Process(const std::vector<std::string> &args) const override;
     };
 }

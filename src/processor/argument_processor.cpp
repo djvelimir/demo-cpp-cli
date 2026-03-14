@@ -17,8 +17,6 @@ namespace processor
     {
     }
 
-    ArgumentProcessor::~ArgumentProcessor() {}
-
     void ArgumentProcessor::Process(const vector<string> &args) const
     {
         if (!argumentValidator.Validate(args))

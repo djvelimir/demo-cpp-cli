@@ -13,8 +13,6 @@ namespace program
     {
     }
 
-    Program::~Program() {}
-
     void Program::Start(const vector<string> &args) const
     {
         argumentProcessor.Process(args);

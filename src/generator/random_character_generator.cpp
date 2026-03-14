@@ -2,12 +2,12 @@
 #include <random>
 #include <string>
 
-using std::mt19937;
 using std::uniform_int_distribution;
 
 namespace generator
 {
     RandomCharacterGenerator::RandomCharacterGenerator()
+        : generator(randomDevice())
     {
         uppercaseCharacters = "ABCDEFGHIJKLMNOPQRSTUVWXYZ";
         lowercaseCharacters = "abcdefghijklmnopqrstuvwxyz";
@@ -19,50 +19,34 @@ namespace generator
                             specialCharacters;
     }
 
-    RandomCharacterGenerator::~RandomCharacterGenerator() {}
+    char RandomCharacterGenerator::RandomFrom(const std::string &chars)
+    {
+        uniform_int_distribution<size_t> distribution(0, chars.size() - 1);
+        return chars[distribution(generator)];
+    }
 
     char RandomCharacterGenerator::GenerateUppercaseCharacter()
     {
-        mt19937 gen(randomDevice());
-        uniform_int_distribution<size_t> dis(0, uppercaseCharacters.length() - 1);
-        size_t randomIndex = dis(gen);
-
-        return uppercaseCharacters[randomIndex];
+        return RandomFrom(uppercaseCharacters);
     }
 
     char RandomCharacterGenerator::GenerateLowercaseCharacter()
     {
-        mt19937 gen(randomDevice());
-        uniform_int_distribution<size_t> dis(0, lowercaseCharacters.length() - 1);
-        size_t randomIndex = dis(gen);
-
-        return lowercaseCharacters[randomIndex];
+        return RandomFrom(lowercaseCharacters);
     }
 
     char RandomCharacterGenerator::GenerateDigitCharacter()
     {
-        mt19937 gen(randomDevice());
-        uniform_int_distribution<size_t> dis(0, digitCharacters.length() - 1);
-        size_t randomIndex = dis(gen);
-
-        return digitCharacters[randomIndex];
+        return RandomFrom(digitCharacters);
     }
 
     char RandomCharacterGenerator::GenerateSpecialCharacter()
     {
-        mt19937 gen(randomDevice());
-        uniform_int_distribution<size_t> dis(0, specialCharacters.length() - 1);
-        size_t randomIndex = dis(gen);
-
-        return specialCharacters[randomIndex];
+        return RandomFrom(specialCharacters);
     }
 
     char RandomCharacterGenerator::GenerateAllowedCharacter()
     {
-        mt19937 gen(randomDevice());
-        uniform_int_distribution<size_t> dis(0, allowedCharacters.length() - 1);
-        size_t randomIndex = dis(gen);
-
-        return allowedCharacters[randomIndex];
+        return RandomFrom(allowedCharacters);
     }
 }

@@ -20,8 +20,8 @@ namespace generator
     public:
         PasswordGenerator(shuffler::StringShufflerBase &stringShuffler, generator::RandomCharacterGeneratorBase &randomCharacterGenerator);
 
-        virtual ~PasswordGenerator();
+        ~PasswordGenerator() override = default;
 
-        std::string Generate() const;
+        std::string Generate() const override;
     };
 }

@@ -22,19 +22,23 @@ namespace generator
 
         std::random_device randomDevice;
 
+        std::mt19937 generator;
+
+        char RandomFrom(const std::string &chars);
+
     public:
         RandomCharacterGenerator();
 
-        virtual ~RandomCharacterGenerator();
+        ~RandomCharacterGenerator() override = default;
 
-        char GenerateUppercaseCharacter();
+        char GenerateUppercaseCharacter() override;
 
-        char GenerateLowercaseCharacter();
+        char GenerateLowercaseCharacter() override;
 
-        char GenerateDigitCharacter();
+        char GenerateDigitCharacter() override;
 
-        char GenerateSpecialCharacter();
+        char GenerateSpecialCharacter() override;
 
-        char GenerateAllowedCharacter();
+        char GenerateAllowedCharacter() override;
     };
 }

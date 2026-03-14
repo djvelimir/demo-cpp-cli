@@ -16,8 +16,8 @@ namespace program
     public:
         Program(const processor::ArgumentProcessorBase &argumentProcessor);
 
-        virtual ~Program();
+        ~Program() override = default;
 
-        void Start(const std::vector<std::string> &args) const;
+        void Start(const std::vector<std::string> &args) const override;
     };
 }
