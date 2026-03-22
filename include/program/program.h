@@ -1,5 +1,8 @@
 #pragma once
 
+#ifndef PROGRAM_H
+#define PROGRAM_H
+
 #include <string>
 #include <vector>
 
@@ -21,3 +24,5 @@ namespace program
         void Start(const std::vector<std::string> &args) const override;
     };
 }
+
+#endif // PROGRAM_H

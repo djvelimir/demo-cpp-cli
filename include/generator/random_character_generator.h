@@ -1,5 +1,8 @@
 #pragma once
 
+#ifndef RANDOM_CHARACTER_GENERATOR_H
+#define RANDOM_CHARACTER_GENERATOR_H
+
 #include <string>
 #include <random>
 
@@ -42,3 +45,5 @@ namespace generator
         char GenerateAllowedCharacter() override;
     };
 }
+
+#endif // RANDOM_CHARACTER_GENERATOR_H

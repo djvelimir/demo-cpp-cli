@@ -1,5 +1,8 @@
 #pragma once
 
+#ifndef TERMINAL_H
+#define TERMINAL_H
+
 #include "display/terminal_base.h"
 
 namespace display
@@ -12,3 +15,5 @@ namespace display
         void Show(const std::string &message) const override;
     };
 }
+
+#endif // TERMINAL_H

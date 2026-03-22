@@ -1,5 +1,8 @@
 #pragma once
 
+#ifndef PASSWORD_GENERATOR_H
+#define PASSWORD_GENERATOR_H
+
 #include <string>
 
 #include "generator/password_generator_base.h"
@@ -25,3 +28,5 @@ namespace generator
         std::string Generate() const override;
     };
 }
+
+#endif // PASSWORD_GENERATOR_H

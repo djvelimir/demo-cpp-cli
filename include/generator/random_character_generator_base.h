@@ -1,5 +1,8 @@
 #pragma once
 
+#ifndef RANDOM_CHARACTER_GENERATOR_BASE_H
+#define RANDOM_CHARACTER_GENERATOR_BASE_H
+
 namespace generator
 {
     class RandomCharacterGeneratorBase
@@ -18,3 +21,5 @@ namespace generator
         virtual char GenerateAllowedCharacter() = 0;
     };
 }
+
+#endif // RANDOM_CHARACTER_GENERATOR_BASE_H

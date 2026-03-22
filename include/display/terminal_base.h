@@ -1,5 +1,8 @@
 #pragma once
 
+#ifndef TERMINAL_BASE_H
+#define TERMINAL_BASE_H
+
 #include <string>
 
 namespace display
@@ -12,3 +15,5 @@ namespace display
         virtual void Show(const std::string &message) const = 0;
     };
 }
+
+#endif // TERMINAL_BASE_H

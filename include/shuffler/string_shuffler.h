@@ -1,5 +1,8 @@
 #pragma once
 
+#ifndef STRING_SHUFFLER_H
+#define STRING_SHUFFLER_H
+
 #include <string>
 #include <random>
 
@@ -20,3 +23,5 @@ namespace shuffler
         std::string &Shuffle(std::string &characters) override;
     };
 }
+
+#endif // STRING_SHUFFLER_H

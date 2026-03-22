@@ -1,5 +1,8 @@
 #pragma once
 
+#ifndef ARGUMENT_PROCESSOR_H
+#define ARGUMENT_PROCESSOR_H
+
 #include <string>
 #include <vector>
 
@@ -27,3 +30,5 @@ namespace processor
         void Process(const std::vector<std::string> &args) const override;
     };
 }
+
+#endif // ARGUMENT_PROCESSOR_H
