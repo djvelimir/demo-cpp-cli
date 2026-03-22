@@ -2,6 +2,7 @@
 #include <random>
 #include <string>
 
+using std::string;
 using std::uniform_int_distribution;
 
 namespace generator
@@ -19,7 +20,7 @@ namespace generator
                             specialCharacters;
     }
 
-    char RandomCharacterGenerator::RandomFrom(const std::string &chars)
+    char RandomCharacterGenerator::RandomFrom(const string &chars)
     {
         uniform_int_distribution<size_t> distribution(0, chars.size() - 1);
         return chars[distribution(generator)];

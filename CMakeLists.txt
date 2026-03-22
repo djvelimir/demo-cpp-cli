@@ -25,6 +25,7 @@ target_compile_options(demo-cpp-cli PRIVATE
     -Wconversion
     -Wshadow
     -Wnon-virtual-dtor
+    -Werror
 )
 
 target_compile_options(demo-cpp-cli PRIVATE -Werror)
