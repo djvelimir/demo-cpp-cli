@@ -1,4 +1,6 @@
-cmake_minimum_required(VERSION 3.0.0)
+cmake_minimum_required(VERSION 3.20.0)
+cmake_policy(VERSION 3.20)
+
 set(CMAKE_CXX_STANDARD 23)
 project(demo-cpp-cli VERSION 0.1.0)
 
@@ -27,8 +29,6 @@ target_compile_options(demo-cpp-cli PRIVATE
     -Wnon-virtual-dtor
     -Werror
 )
-
-target_compile_options(demo-cpp-cli PRIVATE -Werror)
 
 set(CPACK_PROJECT_NAME ${PROJECT_NAME})
 set(CPACK_PROJECT_VERSION ${PROJECT_VERSION})
