@@ -1,10 +1,10 @@
-cmake_minimum_required(VERSION 3.20.0)
-cmake_policy(VERSION 3.20)
+cmake_minimum_required(VERSION 3.20)
+
+project(demo-cpp-cli VERSION 0.1.0 LANGUAGES CXX)
 
 set(CMAKE_CXX_STANDARD 23)
 set(CMAKE_CXX_STANDARD_REQUIRED ON)
 set(CMAKE_CXX_EXTENSIONS OFF)
-project(demo-cpp-cli VERSION 0.1.0)
 
 include(CTest)
 enable_testing()
@@ -23,11 +23,8 @@ add_executable(demo-cpp-cli
 target_include_directories(demo-cpp-cli PRIVATE include)
 
 target_compile_options(demo-cpp-cli PRIVATE
-    -Wall
-    -Wextra
-    -Wpedantic
-    -Wconversion
-    -Wshadow
+    -Wall -Wextra -Wpedantic
+    -Wconversion -Wshadow
     -Wnon-virtual-dtor
     -Werror
 )
