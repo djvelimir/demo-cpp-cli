@@ -21,7 +21,7 @@ using validator::ArgumentValidator;
 
 int main(int argc, char *argv[])
 {
-    vector<string> args(argv, argv + argc);
+    vector<string> args(argv+1, argv + argc);
 
     ArgumentValidator argumentValidator;
     StringShuffler stringShuffler;

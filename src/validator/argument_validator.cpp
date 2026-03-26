@@ -9,6 +9,6 @@ namespace validator
 {
     bool ArgumentValidator::Validate(const vector<string> &args) const
     {
-        return args.size() == 3 && args[1] == "generate" && args[2] == "password";
+        return args.size() == 2 && args[0] == "generate" && args[1] == "password";
     }
 }
