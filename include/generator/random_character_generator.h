@@ -25,8 +25,6 @@ namespace generator
 
         std::random_device randomDevice;
 
-        std::mt19937 generator;
-
         char RandomFrom(const std::string &chars);
 
     public:

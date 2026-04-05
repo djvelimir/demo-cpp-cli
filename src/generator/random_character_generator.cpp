@@ -8,7 +8,6 @@ using std::uniform_int_distribution;
 namespace generator
 {
     RandomCharacterGenerator::RandomCharacterGenerator()
-        : generator(randomDevice())
     {
         uppercaseCharacters = "ABCDEFGHIJKLMNOPQRSTUVWXYZ";
         lowercaseCharacters = "abcdefghijklmnopqrstuvwxyz";
@@ -23,7 +22,7 @@ namespace generator
     char RandomCharacterGenerator::RandomFrom(const string &chars)
     {
         uniform_int_distribution<size_t> distribution(0, chars.size() - 1);
-        return chars[distribution(generator)];
+        return chars[distribution(randomDevice)];
     }
 
     char RandomCharacterGenerator::GenerateUppercaseCharacter()

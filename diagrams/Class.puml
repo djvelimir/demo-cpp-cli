@@ -56,7 +56,6 @@ class RandomCharacterGenerator {
     - specialCharacters: String
     - allowedCharacters: String
     - randomDevice: random_device
-    - generator: mt19937
     - RandomFrom(chars: String): char
 }
 
